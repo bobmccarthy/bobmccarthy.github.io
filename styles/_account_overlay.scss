@@ -1,0 +1,69 @@
+/*	STYLING FOR ACCOUNT OVERLAYS */
+
+/*	LOGIN AND LOGIN FORM REFER TO INITIAL OVERLAY
+	NEW ACCOUNT AND ADD USER REFER TO SECONDARY OVERLAY
+
+*/
+
+#logIn, #newAccount {
+
+	padding: 7em 0;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, .7);
+	text-align: center;
+	z-index: 1;
+	
+}
+
+#instrument {
+	display: block;
+	margin: 1.75em auto;
+	width: 28%;
+}
+
+#logInForm, #addUser {
+	font-family: "Museo-sans", sans-serif;
+	font-size: 1.5em;
+	padding: 1em 0;
+	color: white;
+	background-color: rgba(10, 47, 69, .9);
+	border-radius: .35em;
+	margin: 0 20%;
+	
+	>div > p {
+		margin: 0;
+		padding: .5em;
+	}
+	
+	>.noAcc {
+		font-size: .5em;
+	}
+	
+	>button {
+		background: $accept-color;
+		border: none;
+		display: block;
+		font-size: .75em;
+		margin: .75em auto;
+	}
+	
+	>a {
+		width: 2em;
+		font-size: .5em;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

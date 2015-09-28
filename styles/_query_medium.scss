@@ -1,0 +1,80 @@
+@media screen and (min-width: 938px) {
+	.guitarBoy {
+		display: inline-block;
+		margin-right: 0;
+		width: 45%;
+
+		h1 {
+			font-size: 5em;
+			padding: 1em auto;
+		}
+	}
+
+	.overview {
+		display: inline;
+		float: right;
+		padding-top: 11.4em;
+		padding-left: 0;
+		width: 48%;
+	}
+
+	.imageTrio {
+		clear: both;
+		display: block;
+		float: left;
+		width: 45%;
+	}
+
+	.coupleSunset, .mixingBoards, .imageTrio, footer {
+		width: 45%;
+	}
+
+	.collabText, .becomeText, .aboutInfo {
+		padding-top: 4em;
+		width: 48%;
+
+		h2 {
+			padding-top: 0;
+		}
+
+		p {
+			color: $secondary-color;
+		}
+
+		.findButton {
+			bottom: 0;
+		}
+	}
+
+	.userStories {
+		width: 45%;
+	}
+
+/*	ADJUSTMENTS FOR MUSICIANS SEARCH AND RESULTS PAGE */
+
+	.musicHeader {
+		height: 16em;
+		background-position: 30% 20%;
+	}
+
+	.appLogo {
+		font-size: 3em;
+	}
+
+	.appNav {
+		font-size: 1.25em;
+	}
+
+	.entry {
+		@include grid(4);
+		border-radius: .55em;
+		border-right: 2px solid $background-color;
+		box-sizing: border-box;
+		padding: 3%;
+	}
+
+	.row {
+		overflow: hidden;
+		padding-bottom: 2%;
+	}
+}

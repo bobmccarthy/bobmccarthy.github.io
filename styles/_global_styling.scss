@@ -1,0 +1,101 @@
+/* 	GLOBAL STYLES AND VARIABLES ARE LOCATED ON THIS STYLESHEET */
+
+
+/* 	
+	***DO NOT CHANGE WITHOUT CONTACTING COREY***
+	EM BASE SETS BASE EM SIZING TO 16PX
+	PRIMARY COLOR: GENERAL USE FOR HEADERS AND TEXT USE
+	SECONDARY COLOR: LINKS AND CONTRASTING ELEMENTS
+	CONTRAST COLOR: USED FOR MEDIUM CONTRASTING ELEMENTS TO BE USED SPARINGLY
+	ATTENTION COLOR: A HIGH-CONTRASTING RED TO BE USED SPARINGLY
+*/
+
+$em-base: 16px;
+$primary-color: #353F4C;
+$secondary-color: #1F6C6E;
+$contrast-color: #FF5F49;
+$attention-color: #F8472E;
+$accept-color: #96ffa4;
+$background-color: #faf8f5;
+
+#newAccount, #logIn {
+	display: none;
+}
+
+body {
+	background: $background-color;
+}
+
+h1, h2, h3 {
+	color: $primary-color;
+	font-family: "Museo", sans-serif;
+}
+
+h4, h5, h6, p {
+	color: $primary-color;
+	font-family: "Museo-sans", sans-serif;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+h2 {
+	font-size: 2em;
+	padding: .5em 0;
+}
+
+h3 {
+	font-size: 1.75em;
+	padding: .5em 0;
+}
+
+h4 {
+	font-size: 1.25em;
+}
+
+p {
+	color: $secondary-color;
+	font-size: 1.15em;
+	font-weight: 300;
+	line-height: 1.45em;
+	padding-bottom: 1.5em;
+}
+
+a {
+	color: $contrast-color;
+	font-family: "Museo-sans", sans-serif;
+	text-decoration: none;
+
+	&:hover {
+		color: shade($contrast-color, 25%);
+	}
+
+}
+
+button {
+	background: none;
+	border: .1em solid $secondary-color;
+	border-radius: .35em;
+	color: $secondary-color;
+	display: block;
+	font-family: "Museo-sans", sans-serif;
+	font-size: 1.75em;
+	font-weight: 700;
+	letter-spacing: -.05em;
+	margin: 0 auto;
+	padding: .25em;
+	text-transform: lowercase;
+
+	&:hover {
+		color: lighten($secondary-color, 10%);
+	}
+}
+
+blockquote {
+	color: $contrast-color;
+	font-family: "Museo", sans-serif;
+	font-size: 3em;
+	font-style: italic;
+	font-weight: 700;
+}

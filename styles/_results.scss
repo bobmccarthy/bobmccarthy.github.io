@@ -1,0 +1,39 @@
+.entry {
+	border-top: 2px solid $background-color;
+	font-family: "Museo-sans", sans-serif;
+	padding: 1.5em 5%;
+
+	&:nth-of-type(odd) {
+		background: tint($primary-color, 85%)
+	}
+
+	h4 {
+		display: inline-block;
+		font-size: .88em;
+		padding-left: 1em;
+	}
+
+	.userInstrument {
+		display: inline-block;
+		padding-left: 1em;
+	}
+}
+
+.userImage {
+	display: inline-block;
+	height: 3em;
+	vertical-align: middle;
+}
+
+#expand {
+	border: none;
+	box-sizing: border-box;
+	font-size: 1.5em;
+	float: right;
+	padding: 0 .25em;
+
+	&:active {
+		animation: expand_rotation .5s linear 1 forwards;
+	}
+}
+

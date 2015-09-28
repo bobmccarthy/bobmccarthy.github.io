@@ -1,0 +1,94 @@
+/*	1ST MEDIA QUERY THAT COVERS SMALL/MEDIUM SCREEN SIZES */
+
+@media screen and(min-width: 632px) {
+
+	.mixingBoards {
+		display: block;
+		background: url("/images/mixingBoards.jpg");
+		background-size: cover;
+		background-position: 70% 50%;
+		height: 25em;
+	}
+
+	.coupleSunset, .mixingBoards, .userStories {
+		float: left;
+		margin-right: 2%;
+		width: 38%;
+	}
+
+	.coupleSunset {
+		background-position: 80% 90%;
+		height: 31em;
+	}
+
+
+
+	.overview, .collabText, .becomeText, .aboutInfo {
+		background: none;
+		display: block;
+		float: right;
+		padding-left: 0;
+		width: 60%;
+
+		h2 {
+			padding-top: 0;
+		}
+
+		p {
+			color: $secondary-color;
+		}
+
+		.findButton {
+			bottom: 0;
+		}
+	}
+
+	.findCollab {
+		min-height: 18em;
+	}
+
+	.becomeCollab {
+		clear: both;
+	}
+
+	.userStories {
+		clear:both;
+	}
+
+	footer {
+		width: 38%;
+	}
+
+/*	SIZE ADJUSTMENTS FOR MUSIC SEARCH PAGE */
+
+	.musicHeader {
+		height: 12em;
+	}
+
+	.appLogo {
+		font-size: 2.25em;
+	}
+
+	.appNav {
+		font-size: 1.25em;
+	}
+
+	.genInfo, .entry {
+		padding: 1.5em 10%;
+	} 
+
+	#musicianFilter {
+		display: block;
+		float: left;
+		font-family: "Museo-sans", sans-serif;
+		font-size: 1em;
+		margin: 1em auto;
+		width: 45%;
+	}
+
+	#musicianFilterButton {
+		width: 45%;
+		margin-bottom: .5em;
+	}
+
+}
