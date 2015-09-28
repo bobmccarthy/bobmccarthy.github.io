@@ -23,7 +23,12 @@ $(document).ready(function(){
 	// var $motionFilterButton=$('#motionFilterButton');
 	var addUser = $('#addUser');
 	var $name=$('#name');
-
+	newMusician.on('add', function(newUser){
+		// newUser.save();
+		var user1= new musicianView({model: newUser});
+		// console.log('add workd');
+		$('#musiciansP').prepend(user1.$el);
+	});
 
 	
 	var $email=$('#email');
@@ -58,6 +63,7 @@ $(document).ready(function(){
 		goMusic: function(){
 			$('section').hide();
 			$('#musiciansPage').show();
+			$('.showMusicians').show();
 			newMusician.fetch();
 	
 		},
@@ -97,7 +103,7 @@ $(document).ready(function(){
     	e.preventDefault();
     	
     	$.get(
-		'http://tiyfe.herokuapp.com/collections/SkillsUp-users',
+		'http://tiyfe.herokuapp.com/collections/SkillsUp',
 		function(response) {
 
 			for (var j=0; j<response.length; j++){
@@ -125,36 +131,41 @@ $(document).ready(function(){
 		},
 		'json'
 		);
+		window.location = '#musicians';
     })
 
 	// var dropdownSelection = ('#instrument');
 
 	addUser.on('submit', function(e){
 		e.preventDefault();
-		
-		$.post(
-			'http://skills-up.herokuapp.com/musicians',
+		var image = $('#userAvatar').val() || '../images/default_usr_icon_sm.png';
+		console.log(image);
+		if ($name.val()===''||$('#newPassword').val()===''||$email.val()===''||$('#aboutYou').val()===''){
+			$('.createError').text('Please fill out all fields')
+		}
+		else{
+			$.post(
+			'http://tiyfe.herokuapp.com/collections/SkillsUp',
 			{
 				name: $name.val(),
-				instrument_id: $('#instrument').val(),
-				contact: $email.val()	
+				password: $('#newPassword').val(),
+				instrument: $('#instrument').val(),
+				contact: $email.val(),
+				description: $('#aboutYou').val(),
+				img: image
+
 			}
 			).done(function(data){
 				$name.val('');
 				$email.val('');
 				$('section').hide();
 				$('#musiciansPage').show();
-				
+				console.log('success!');
 				window.location = '#musicians';
 			});
+		}
+		
 
-	});
-
-	newMusician.on('add', function(newUser){
-		// newUser.save();
-		var user1= new musicianView({model: newUser});
-		// console.log('add workd');
-		$('#musiciansP').prepend(user1.$el);
 	});
 
 	// newMotion.on('add', function(newUser){

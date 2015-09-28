@@ -12681,7 +12681,7 @@ var musicianModel = require('../models/musician-model.js');
 
 module.exports = Backbone.Collection.extend({
 	model: musicianModel,
-	url: 'http://skills-up.herokuapp.com/musicians'
+	url: 'http://tiyfe.herokuapp.com/collections/SkillsUp'
 
 });
 
@@ -12709,6 +12709,12 @@ $(document).ready(function () {
 	// var $motionFilterButton=$('#motionFilterButton');
 	var addUser = $('#addUser');
 	var $name = $('#name');
+	newMusician.on('add', function (newUser) {
+		// newUser.save();
+		var user1 = new musicianView({ model: newUser });
+		// console.log('add workd');
+		$('#musiciansP').prepend(user1.$el);
+	});
 
 	var $email = $('#email');
 	$('#newAccount').hide();
@@ -12740,6 +12746,7 @@ $(document).ready(function () {
 		goMusic: function goMusic() {
 			$('section').hide();
 			$('#musiciansPage').show();
+			$('.showMusicians').show();
 			newMusician.fetch();
 		},
 		goMotion: function goMotion() {
@@ -12772,7 +12779,7 @@ $(document).ready(function () {
 	$('#logInForm').on('submit', function (e) {
 		e.preventDefault();
 
-		$.get('http://tiyfe.herokuapp.com/collections/SkillsUp-users', function (response) {
+		$.get('http://tiyfe.herokuapp.com/collections/SkillsUp', function (response) {
 
 			for (var j = 0; j < response.length; j++) {
 
@@ -12792,32 +12799,35 @@ $(document).ready(function () {
 				}
 			}
 		}, 'json');
+		window.location = '#musicians';
 	});
 
 	// var dropdownSelection = ('#instrument');
 
 	addUser.on('submit', function (e) {
 		e.preventDefault();
+		var image = $('#userAvatar').val() || '../images/default_usr_icon_sm.png';
+		console.log(image);
+		if ($name.val() === '' || $('#newPassword').val() === '' || $email.val() === '' || $('#aboutYou').val() === '') {
+			$('.createError').text('Please fill out all fields');
+		} else {
+			$.post('http://tiyfe.herokuapp.com/collections/SkillsUp', {
+				name: $name.val(),
+				password: $('#newPassword').val(),
+				instrument: $('#instrument').val(),
+				contact: $email.val(),
+				description: $('#aboutYou').val(),
+				img: image
 
-		$.post('http://skills-up.herokuapp.com/musicians', {
-			name: $name.val(),
-			instrument_id: $('#instrument').val(),
-			contact: $email.val()
-		}).done(function (data) {
-			$name.val('');
-			$email.val('');
-			$('section').hide();
-			$('#musiciansPage').show();
-
-			window.location = '#musicians';
-		});
-	});
-
-	newMusician.on('add', function (newUser) {
-		// newUser.save();
-		var user1 = new musicianView({ model: newUser });
-		// console.log('add workd');
-		$('#musiciansP').prepend(user1.$el);
+			}).done(function (data) {
+				$name.val('');
+				$email.val('');
+				$('section').hide();
+				$('#musiciansPage').show();
+				console.log('success!');
+				window.location = '#musicians';
+			});
+		}
 	});
 
 	// newMotion.on('add', function(newUser){
@@ -12872,11 +12882,14 @@ var Backbone = require('backbone');
 module.exports = Backbone.Model.extend({
 	defaults: {
 		name: '',
-		instrument_id: '',
-		contact: ''
+		password: '',
+		contact: '',
+		instrument: '',
+		description: ''
+
 	},
-	urlRoot: 'http://skills-up.herokuapp.com/musicians',
-	idAttribute: 'id'
+	urlRoot: 'http://tiyfe.herokuapp.com/collections/SkillsUp',
+	idAttribute: '_id'
 });
 
 },{"backbone":1}],9:[function(require,module,exports){
@@ -12921,6 +12934,7 @@ var musicianModel = require('../models/musician-model.js');
 
 module.exports = Backbone.View.extend({
 	tagName: 'section',
+	className: 'showMusicians',
 	initialize: function initialize() {
 
 		_.bindAll(this, 'render', 'expander');
@@ -12934,9 +12948,10 @@ module.exports = Backbone.View.extend({
 		var userName = this.model.get('name');
 		var userInstrument = this.model.get('instrument');
 		var userEmail = this.model.get('contact');
-		// console.log(this.model.get('name'));
+		var userDesc = this.model.get('description');
+		var img = this.model.get('img');
 
-		this.$el.html('<div class="' + userInstrument.toString() + ' entry"><button id="expand">+</button><img class="userImage" src="../images/default_usr_icon_sm.png"><h4>' + userName + '</h4><div id="desc"><p class="userInstrument">' + userInstrument + '</p><p>' + userEmail + '</p><p>I am a rockstar musician. I have been in plenty of bands and stuff. What else... Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah</p></div></div>');
+		this.$el.html('<div class="' + userInstrument.toString() + ' entry"><button id="expand">+</button><img class="userImage" src="' + img + '"><h4>' + userName + '</h4><div id="desc"><p class="userInstrument">' + userInstrument + '</p><p>' + userEmail + '</p><p>' + userDesc + '</p></div></div>');
 		this.$('#desc').hide();
 		// console.log(userInstrument.toString());
 	},
