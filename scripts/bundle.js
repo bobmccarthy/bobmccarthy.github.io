@@ -12763,6 +12763,7 @@ $(document).ready(function () {
 			$('section').hide();
 			$('#homePage').show();
 			$('#newAccount').toggle('slow');
+			window.scrollTo(0, 0);
 		}
 
 	});
