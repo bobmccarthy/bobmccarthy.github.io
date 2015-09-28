@@ -154,7 +154,7 @@ $(document).ready(function(){
 		// newUser.save();
 		var user1= new musicianView({model: newUser});
 		// console.log('add workd');
-		$('#musiciansP').append(user1.$el);
+		$('#musiciansP').prepend(user1.$el);
 	});
 
 	// newMotion.on('add', function(newUser){
