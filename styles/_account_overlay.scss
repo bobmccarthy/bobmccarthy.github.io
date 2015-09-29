@@ -7,7 +7,7 @@
 
 #logIn, #newAccount {
 
-	padding: 7em 0;
+	padding: 6em 0;
 	position: absolute;
 	height: 100%;
 	width: 100%;
@@ -31,28 +31,34 @@
 	background-color: rgba(10, 47, 69, .9);
 	border-radius: .35em;
 	margin: 0 20%;
-	
-	>div > p {
-		margin: 0;
-		padding: .5em;
+	p{
+		margin-bottom: -1em;
 	}
-	
-	>.noAcc {
-		font-size: .5em;
+	.addUserBtn{
+		height: 1em;
+		line-height: .5em;
+		margin-bottom: 1em;
 	}
+}	
+.noAcc {
+	font-size: .5em;
+}
 	
-	>button {
-		background: $accept-color;
-		border: none;
-		display: block;
-		font-size: .75em;
-		margin: .75em auto;
-	}
-	
-	>a {
-		width: 2em;
-		font-size: .5em;
-	}
+.logInButton {
+	background: $accept-color;
+	border: none;
+	display: block;
+	font-size: .75em;
+	margin: .75em auto;
+}
+.cancelLogIn {
+	width: 2em;
+	font-size: .5em;
+}
+.logUserName, .logPassword, #name, #email, #newPassword, #aboutYoubout, #aboutYou, #userAvatar{
+	height: 3em;
+	margin-bottom: 1em;
+	width: 65%;
 }
 
 

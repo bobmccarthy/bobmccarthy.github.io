@@ -97,7 +97,7 @@ $(document).ready(function(){
     var t = setInterval(function(){
 		$('#carousel1').toggle('left');
 		$('#carousel2').toggle('right');
-	},5000);
+	},3000);
 
 
     $('#logInForm').on('submit', function(e){

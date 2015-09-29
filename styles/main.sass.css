@@ -131,7 +131,7 @@ blockquote {
 
 */
 #logIn, #newAccount {
-  padding: 7em 0;
+  padding: 6em 0;
   position: absolute;
   height: 100%;
   width: 100%;
@@ -152,20 +152,31 @@ blockquote {
   background-color: rgba(10, 47, 69, 0.9);
   border-radius: .35em;
   margin: 0 20%; }
-  #logInForm > div > p, #addUser > div > p {
-    margin: 0;
-    padding: .5em; }
-  #logInForm > .noAcc, #addUser > .noAcc {
-    font-size: .5em; }
-  #logInForm > button, #addUser > button {
-    background: #96ffa4;
-    border: none;
-    display: block;
-    font-size: .75em;
-    margin: .75em auto; }
-  #logInForm > a, #addUser > a {
-    width: 2em;
-    font-size: .5em; }
+  #logInForm p, #addUser p {
+    margin-bottom: -1em; }
+  #logInForm .addUserBtn, #addUser .addUserBtn {
+    height: 1em;
+    line-height: .5em;
+    margin-bottom: 1em; }
+
+.noAcc {
+  font-size: .5em; }
+
+.logInButton {
+  background: #96ffa4;
+  border: none;
+  display: block;
+  font-size: .75em;
+  margin: .75em auto; }
+
+.cancelLogIn {
+  width: 2em;
+  font-size: .5em; }
+
+.logUserName, .logPassword, #name, #email, #newPassword, #aboutYoubout, #aboutYou, #userAvatar {
+  height: 3em;
+  margin-bottom: 1em;
+  width: 65%; }
 
 /* 	STYLESHEET FOR ALL ITEMS THAT ARE HIDDEN BY DEFAULT */
 .mixingBoards, .imageTrio, .aboutInfo {
@@ -210,7 +221,6 @@ nav a {
   margin-bottom: .5em; }
 
 .userStories {
-  height: 18em;
   background: #1F6C6E;
   padding: 1.5em 1em; }
   .userStories blockquote {

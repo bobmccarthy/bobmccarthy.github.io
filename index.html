@@ -17,7 +17,7 @@
 				<button class="logInButton">Log In</button>
 				<p class="error"></p>
 				<p class="noAcc">No Account? <a href="#addUser">Sign Up</a></p>
-				<a href="#">Cancel</a>
+				<a class="cancelLogIn" href="#">Cancel</a>
 			</form>
 		</section>
 		<section id="newAccount">
@@ -40,11 +40,11 @@
 					<option value="Banjo">Banjo</option>
 					<option value="Harmonica">Harmonica</option>
 				</select>
-				<div><p>About You</p></div>
+				<div class="aboutYoubout"><p>About You</p></div>
 				<div><textarea type="text" id="aboutYou"></textarea></div>
 				<input id="userAvatar" type="text" placeholder="Image URL">
 				<div><p class="createError"></p></div>
-				<button>add user</button>
+				<button class="addUserBtn">add user</button>
 				<a id="cancelNewAcc" href="#">Cancel</a>
 			</form>
 		</section>
@@ -83,14 +83,14 @@
 		<div class="storiesWrapper">
 			<div class ="userStories" id="carousel">
 				<div id="carousel1">
-					<blockquote>"Collab user stories and quotes"</blockquote>
+					<blockquote>"SkillsUp is the easiest way to be a gigging musician without a band."</blockquote>
 					<img src="/images/avatar.png">
 					<p>-Rory McMahann</p>
 				</div>
 				<div id="carousel2">
-					<blockquote>"I love cake"</blockquote>
+					<blockquote>"I was surprised at the quality of musicians that SkillsUp utilizes."</blockquote>
 					<img src="/images/bob_avatar.png">
-					<p>-Bob McMahann</p>
+					<p>-Bob McCarthy</p>
 				</div>
 			</div>
 				<div class="aboutInfo">
@@ -136,33 +136,33 @@
 		</section>
 
 		<section id="musiciansPage">
-		<div class="musicHeader">
-			<h2 class="appLogo">SkillsUp</h2>
-		</div>
+			<div class="musicHeader">
+				<h2 class="appLogo">SkillsUp</h2>
+			</div>
 			<nav class="appNav">
 				<a href="#">Home</a>
 				<a href="#account">Account</a>
 			</nav>
 
 			<div class="genInfo">
-			<h3>Find a Collaborator</h3>
-			<p>Find a musician for your project, or just someone to jam with.</p>
+				<h3>Find a Collaborator</h3>
+				<p>Find a musician for your project, or just someone to jam with.</p>
 		<!-- <a href="#musicians"><button>Music</button></a>
 			<a href="#motioners"><button>Motion</button></a> -->
-			<select id="musicianFilter" type="dropdown">
-				<option value="">All Musicians</option>
-				<option value="Guitar">Guitar</option>
-				<option value="Drums">Drums</option>
-				<option value="Vocals">Vocals</option>
-				<option value="Bass">Bass</option>
-				<option value="Keys">Keys</option>
-				<option value="Electronic">Electronic Production</option>
-				<option value="Gear">Gear Rental</option>
-				<option value="MC">MC</option>
-				<option value="Banjo">Banjo</option>
-				<option value="Harmonica">Harmonica</option>
-			</select> 
-			<button id="musicianFilterButton">Search</button>
+					<select id="musicianFilter" type="dropdown">
+					<option value="">All Musicians</option>
+					<option value="Guitar">Guitar</option>
+					<option value="Drums">Drums</option>
+					<option value="Vocals">Vocals</option>
+					<option value="Bass">Bass</option>
+					<option value="Keys">Keys</option>
+					<option value="Electronic">Electronic Production</option>
+					<option value="Gear">Gear Rental</option>
+					<option value="MC">MC</option>
+					<option value="Banjo">Banjo</option>
+					<option value="Harmonica">Harmonica</option>
+				</select> 
+				<button id="musicianFilterButton">Search</button>
 			</div>
 			<div class="row" id="musiciansP"></div>
 		</section>
