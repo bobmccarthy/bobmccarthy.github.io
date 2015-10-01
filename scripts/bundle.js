@@ -12681,7 +12681,7 @@ var musicianModel = require('../models/musician-model.js');
 
 module.exports = Backbone.Collection.extend({
 	model: musicianModel,
-	url: 'http://tiyfe.herokuapp.com/collections/SkillsUp'
+	url: 'https://jmingus-server.herokuapp.com/collections/bob-SU'
 
 });
 
@@ -12699,7 +12699,8 @@ var motionModel = require('./models/motion-model.js');
 var newMusician = new musicianCollection();
 // var newMotion = new motionCollection();
 
-var musicianUrl = 'https://skills-up.herokuapp.com/musicians';
+var musicianUrl = 'https://jmingus-server.herokuapp.com/collections/bob-SU';
+// var musicianUrl = 'https://skills-up.herokuapp.com/musicians';
 // var motionUrl = 'https://skills-up.herokuapp.com/motioners';
 
 $(document).ready(function () {
@@ -12780,7 +12781,7 @@ $(document).ready(function () {
 	$('#logInForm').on('submit', function (e) {
 		e.preventDefault();
 
-		$.get('http://tiyfe.herokuapp.com/collections/SkillsUp', function (response) {
+		$.get('https://jmingus-server.herokuapp.com/collections/bob-SU', function (response) {
 
 			for (var j = 0; j < response.length; j++) {
 
@@ -12812,7 +12813,7 @@ $(document).ready(function () {
 		if ($name.val() === '' || $('#newPassword').val() === '' || $email.val() === '' || $('#aboutYou').val() === '') {
 			$('.createError').text('Please fill out all fields');
 		} else {
-			$.post('http://tiyfe.herokuapp.com/collections/SkillsUp', {
+			$.post('https://jmingus-server.herokuapp.com/collections/bob-SU', {
 				name: $name.val(),
 				password: $('#newPassword').val(),
 				instrument: $('#instrument').val(),
@@ -12886,10 +12887,11 @@ module.exports = Backbone.Model.extend({
 		password: '',
 		contact: '',
 		instrument: '',
-		description: ''
+		description: '',
+		img: ''
 
 	},
-	urlRoot: 'http://tiyfe.herokuapp.com/collections/SkillsUp',
+	urlRoot: 'https://jmingus-server.herokuapp.com/collections/bob-SU',
 	idAttribute: '_id'
 });
 

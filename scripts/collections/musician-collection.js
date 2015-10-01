@@ -4,6 +4,6 @@ var musicianModel = require ('../models/musician-model.js');
 
 module.exports = Backbone.Collection.extend({
 	model: musicianModel,
-	url: 'http://tiyfe.herokuapp.com/collections/SkillsUp'
+	url: 'https://jmingus-server.herokuapp.com/collections/bob-SU'
 
 });

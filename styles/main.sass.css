@@ -133,7 +133,7 @@ blockquote {
 #logIn, #newAccount {
   padding: 6em 0;
   position: absolute;
-  height: 100%;
+  height: 300%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   text-align: center;

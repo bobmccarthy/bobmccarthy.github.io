@@ -7,9 +7,10 @@ module.exports = Backbone.Model.extend({
 		password: '',
 		contact: '',
 		instrument: '',
-		description: ''
+		description: '',
+		img: ''
 
 	},
-	urlRoot: 'http://tiyfe.herokuapp.com/collections/SkillsUp',
+	urlRoot: 'https://jmingus-server.herokuapp.com/collections/bob-SU',
 	idAttribute: '_id'
 })
