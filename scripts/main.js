@@ -12,7 +12,7 @@ var motionModel= require('./models/motion-model.js');
 var newMusician = new musicianCollection();
 // var newMotion = new motionCollection();
 
-var musicianUrl = 'https://jmingus-server.herokuapp.com/collections/bob-SU'
+var musicianUrl = 'http://tiyfe.herokuapp.com/collections/bob-Skills-Up'
 // var musicianUrl = 'https://skills-up.herokuapp.com/musicians';
 // var motionUrl = 'https://skills-up.herokuapp.com/motioners';
 
@@ -104,7 +104,7 @@ $(document).ready(function(){
     	e.preventDefault();
     	
     	$.get(
-		'https://jmingus-server.herokuapp.com/collections/bob-SU',
+		'http://tiyfe.herokuapp.com/collections/bob-Skills-Up',
 		function(response) {
 
 			for (var j=0; j<response.length; j++){
@@ -146,7 +146,7 @@ $(document).ready(function(){
 		}
 		else{
 			$.post(
-			'https://jmingus-server.herokuapp.com/collections/bob-SU',
+			'http://tiyfe.herokuapp.com/collections/bob-Skills-Up',
 			{
 				name: $name.val(),
 				password: $('#newPassword').val(),

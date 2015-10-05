@@ -11,6 +11,6 @@ module.exports = Backbone.Model.extend({
 		img: ''
 
 	},
-	urlRoot: 'https://jmingus-server.herokuapp.com/collections/bob-SU',
+	urlRoot: 'http://tiyfe.herokuapp.com/collections/bob-Skills-Up',
 	idAttribute: '_id'
 })
