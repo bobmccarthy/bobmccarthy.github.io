@@ -1,416 +1,94 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
-
 body {
-  line-height: 1; }
+  margin: 0; }
 
-ol, ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-@keyframes expand_rotation {
-  0% {
-    transform: rotate(0deg); }
-  100% {
-    transform: rotate(135deg); } }
-
-/* 	GLOBAL STYLES AND VARIABLES ARE LOCATED ON THIS STYLESHEET */
-/* 	
-	***DO NOT CHANGE WITHOUT CONTACTING COREY***
-	EM BASE SETS BASE EM SIZING TO 16PX
-	PRIMARY COLOR: GENERAL USE FOR HEADERS AND TEXT USE
-	SECONDARY COLOR: LINKS AND CONTRASTING ELEMENTS
-	CONTRAST COLOR: USED FOR MEDIUM CONTRASTING ELEMENTS TO BE USED SPARINGLY
-	ATTENTION COLOR: A HIGH-CONTRASTING RED TO BE USED SPARINGLY
-*/
-#newAccount, #logIn {
-  display: none; }
-
-body {
-  background: #faf8f5; }
-
-h1, h2, h3 {
-  color: #353F4C;
-  font-family: "Museo", sans-serif; }
-
-h4, h5, h6, p {
-  color: #353F4C;
-  font-family: "Museo-sans", sans-serif; }
-
-h1 {
-  font-size: 3em; }
-
-h2 {
-  font-size: 2em;
-  padding: .5em 0; }
-
-h3 {
-  font-size: 1.75em;
-  padding: .5em 0; }
-
-h4 {
-  font-size: 1.25em; }
-
-p {
-  color: #1F6C6E;
-  font-size: 1.15em;
-  font-weight: 300;
-  line-height: 1.45em;
-  padding-bottom: 1.5em; }
-
-a {
-  color: #FF5F49;
-  font-family: "Museo-sans", sans-serif;
-  text-decoration: none; }
-  a:hover {
-    color: #bf4737; }
-
-button {
-  background: none;
-  border: 0.1em solid #1F6C6E;
-  border-radius: .35em;
-  color: #1F6C6E;
-  display: block;
-  font-family: "Museo-sans", sans-serif;
-  font-size: 1.75em;
-  font-weight: 700;
-  letter-spacing: -.05em;
-  margin: 0 auto;
-  padding: .25em;
-  text-transform: lowercase; }
-  button:hover {
-    color: #2a9396; }
-
-blockquote {
-  color: #FF5F49;
-  font-family: "Museo", sans-serif;
-  font-size: 3em;
-  font-style: italic;
-  font-weight: 700; }
-
-/*	STYLING FOR ACCOUNT OVERLAYS */
-/*	LOGIN AND LOGIN FORM REFER TO INITIAL OVERLAY
-	NEW ACCOUNT AND ADD USER REFER TO SECONDARY OVERLAY
-
-*/
-#logIn, #newAccount {
-  padding: 6em 0;
+#login {
+  z-index: 900;
   position: absolute;
-  height: 300%;
+  display: none;
   width: 100%;
+  text-align: center;
+  padding: 3em;
   background-color: rgba(0, 0, 0, 0.7);
-  text-align: center;
-  z-index: 1; }
+  height: 100%; }
 
-#instrument {
-  display: block;
-  margin: 1.75em auto;
-  width: 28%; }
-
-#logInForm, #addUser {
-  font-family: "Museo-sans", sans-serif;
-  font-size: 1.5em;
-  padding: 1em 0;
-  color: white;
-  background-color: rgba(10, 47, 69, 0.9);
-  border-radius: .35em;
-  margin: 0 20%; }
-  #logInForm p, #addUser p {
-    margin-bottom: -1em; }
-  #logInForm .addUserBtn, #addUser .addUserBtn {
-    height: 1em;
-    line-height: .5em;
-    margin-bottom: 1em; }
-
-.noAcc {
-  font-size: .5em; }
-
-.logInButton {
-  background: #96ffa4;
-  border: none;
-  display: block;
-  font-size: .75em;
-  margin: .75em auto; }
-
-.cancelLogIn {
-  width: 2em;
-  font-size: .5em; }
-
-.logUserName, .logPassword, #name, #email, #newPassword, #aboutYoubout, #aboutYou, #userAvatar {
-  height: 3em;
-  margin-bottom: 1em;
-  width: 65%; }
-
-/* 	STYLESHEET FOR ALL ITEMS THAT ARE HIDDEN BY DEFAULT */
-.mixingBoards, .imageTrio, .aboutInfo {
-  display: none; }
-
-.guitarBoy {
-  background-image: url("/images/roughDraftGuitarBoy.jpg");
-  text-align: center;
-  background-size: cover; }
-  .guitarBoy h1 {
-    padding: 2em 0;
+.top-navbar {
+  background-color: #707070; }
+  .top-navbar a {
     color: white;
-    font-size: 4em;
-    font-family: "museo"; }
+    font-size: 1em;
+    text-decoration: none;
+    margin-left: 1em; }
+  .top-navbar #navBtn {
+    font-size: 1.5em;
+    padding: 0.5em; }
+  .top-navbar .rightBtn {
+    padding: 0.5em; }
+  .top-navbar .active {
+    background-color: #F79227; }
 
-nav a {
-  margin-right: 1.5em; }
-  nav a:last-child {
-    margin-right: .5em; }
+.bottom-navbar {
+  text-align: center; }
+  .bottom-navbar .storeLogo {
+    background-color: red;
+    color: white;
+    padding: 2em; }
+  .bottom-navbar p {
+    font-size: 1.2em;
+    margin-top: 0.75em;
+    margin-bottom: 0; }
+  .bottom-navbar input {
+    margin-top: 1em; }
+  .bottom-navbar button {
+    margin-left: 0.5em; }
+  .bottom-navbar #myLists {
+    background-image: url("../images/down-arrow.png");
+    height: 2em; }
 
-.guitarBoy, .overview, .collabText, .becomeText, .userStories, .aboutInfo {
-  box-sizing: border-box;
-  padding: 2em 5%; }
+.homeImg img {
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 3em; }
 
-.overview {
-  padding: 1.5em; }
+.right {
+  float: right; }
 
-.coupleSunset {
-  background: url("/images/roughDraftCoupleSunset.jpg");
-  background-size: cover;
-  background-position: 50% 70%;
-  height: 15em; }
-
-.collabText {
-  background: #120726; }
-  .collabText p {
-    color: #2a9396; }
-  .collabText button {
-    margin-bottom: .5em; }
-
-.fakeAddUser {
-  margin-bottom: .5em; }
-
-.userStories {
-  background: #1F6C6E;
-  padding: 1.5em 1em; }
-  .userStories blockquote {
-    font-size: 2em;
-    margin: .5em 0; }
-  .userStories p {
-    color: #fff;
-    font-size: 1.25em;
-    font-style: italic;
-    text-align: center; }
-  .userStories img {
-    display: block;
-    margin: .75em auto;
-    width: 25%; }
-
-footer {
-  background: #1F6C6E;
-  clear: both; }
-  footer p {
-    color: #faf8f5;
-    display: block;
-    font-size: .75em;
-    padding-top: .5em;
-    text-align: center; }
-
-.musicHeader {
-  background-image: url("/images/putsMac.jpg");
-  background-size: cover;
-  height: 10em;
+.listContainer {
+  margin: 2em;
   text-align: center; }
 
-.appLogo {
-  color: #1F6C6E;
-  left: .25em;
-  padding: 0;
-  position: absolute;
-  top: .25em; }
+.each {
+  margin-bottom: 1em;
+  margin-top: 1em; }
 
-nav {
-  position: absolute;
-  right: .5em;
-  top: .5em; }
+.eachList {
+  padding: 1em; }
 
-.genInfo {
-  padding: 0 5%; }
+.xtraMargin {
+  margin-top: 1em; }
 
-#musicianFilter {
-  display: block;
-  font-family: "Museo-sans", sans-serif;
-  font-size: 1em;
-  margin: 1em auto;
-  width: 80%; }
+.listItems {
+  height: 14em;
+  padding: 1em; }
+  .listItems button {
+    float: right; }
 
-#musicianFilterButton {
-  width: 80%;
-  margin-bottom: .5em; }
+.itemPic {
+  height: 5em; }
 
-.entry {
-  border-top: 2px solid #faf8f5;
-  font-family: "Museo-sans", sans-serif;
-  padding: 1.5em 5%; }
-  .entry:nth-of-type(odd) {
-    background: #e1e2e4; }
-  .entry h4 {
-    display: inline-block;
-    font-size: .88em;
-    padding-left: 1em; }
-  .entry .userInstrument {
-    display: inline-block;
-    padding-left: 1em; }
+.box-shadow--2dp {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }
 
-.userImage {
-  display: inline-block;
-  height: 3em;
-  vertical-align: middle; }
+.box-shadow--3dp {
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12); }
 
-#expand {
-  border: none;
-  box-sizing: border-box;
-  font-size: 1.5em;
-  float: right;
-  padding: 0 0.25em; }
-  #expand:active {
-    animation: expand_rotation 0.5s linear 1 forwards; }
+.box-shadow--4dp {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2); }
 
-/*	1ST MEDIA QUERY THAT COVERS SMALL/MEDIUM SCREEN SIZES */
-@media screen and (min-width: 632px) {
-  .mixingBoards {
-    display: block;
-    background: url("/images/mixingBoards.jpg");
-    background-size: cover;
-    background-position: 70% 50%;
-    height: 25em; }
-  .coupleSunset, .mixingBoards, .userStories {
-    float: left;
-    margin-right: 2%;
-    width: 38%; }
-  .coupleSunset {
-    background-position: 80% 90%;
-    height: 31em; }
-  .overview, .collabText, .becomeText, .aboutInfo {
-    background: none;
-    display: block;
-    float: right;
-    padding-left: 0;
-    width: 60%; }
-    .overview h2, .collabText h2, .becomeText h2, .aboutInfo h2 {
-      padding-top: 0; }
-    .overview p, .collabText p, .becomeText p, .aboutInfo p {
-      color: #1F6C6E; }
-    .overview .findButton, .collabText .findButton, .becomeText .findButton, .aboutInfo .findButton {
-      bottom: 0; }
-  .findCollab {
-    min-height: 18em; }
-  .becomeCollab {
-    clear: both; }
-  .userStories {
-    clear: both; }
-  footer {
-    width: 38%; }
-  /*	SIZE ADJUSTMENTS FOR MUSIC SEARCH PAGE */
-  .musicHeader {
-    height: 12em; }
-  .appLogo {
-    font-size: 2.25em; }
-  .appNav {
-    font-size: 1.25em; }
-  .genInfo, .entry {
-    padding: 1.5em 10%; }
-  #musicianFilter {
-    display: block;
-    float: left;
-    font-family: "Museo-sans", sans-serif;
-    font-size: 1em;
-    margin: 1em auto;
-    width: 45%; }
-  #musicianFilterButton {
-    width: 45%;
-    margin-bottom: .5em; } }
+.box-shadow--6dp {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2); }
 
-@media screen and (min-width: 938px) {
-  .guitarBoy {
-    display: inline-block;
-    margin-right: 0;
-    width: 45%; }
-    .guitarBoy h1 {
-      font-size: 5em;
-      padding: 1em auto; }
-  .overview {
-    display: inline;
-    float: right;
-    padding-top: 11.4em;
-    padding-left: 0;
-    width: 48%; }
-  .imageTrio {
-    clear: both;
-    display: block;
-    float: left;
-    width: 45%; }
-  .coupleSunset, .mixingBoards, .imageTrio, footer {
-    width: 45%; }
-  .collabText, .becomeText, .aboutInfo {
-    padding-top: 4em;
-    width: 48%; }
-    .collabText h2, .becomeText h2, .aboutInfo h2 {
-      padding-top: 0; }
-    .collabText p, .becomeText p, .aboutInfo p {
-      color: #1F6C6E; }
-    .collabText .findButton, .becomeText .findButton, .aboutInfo .findButton {
-      bottom: 0; }
-  .userStories {
-    width: 45%; }
-  /*	ADJUSTMENTS FOR MUSICIANS SEARCH AND RESULTS PAGE */
-  .musicHeader {
-    height: 16em;
-    background-position: 30% 20%; }
-  .appLogo {
-    font-size: 3em; }
-  .appNav {
-    font-size: 1.25em; }
-  .entry {
-    float: left;
-    margin-right: 2%;
-    width: 32%;
-    border-radius: .55em;
-    border-right: 2px solid #faf8f5;
-    box-sizing: border-box;
-    padding: 3%; }
-    .entry:last-child {
-      margin-right: 0; }
-  .row {
-    overflow: hidden;
-    padding-bottom: 2%; } }
+.box-shadow--8dp {
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2); }
+
+.box-shadow--16dp {
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2); }

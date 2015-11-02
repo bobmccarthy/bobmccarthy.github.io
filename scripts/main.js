@@ -1,210 +1,58 @@
 'use strict';
-var $ = require ('jquery');
-var Backbone = require ('backbone');
-var musicianView = require('./views/musicianView.js');
-var musicianCollection = require('./collections/musician-collection.js');
-var musicianModel= require('./models/musician-model.js');
-var motionView = require('./views/motionView.js');
-var motionCollection = require('./collections/motion-collection.js');
-var motionModel= require('./models/motion-model.js');
-	
+var React = require('react');
+var bootstrap = require('bootstrap');
+var ReactDOM = require('react-dom');
+var Backbone = require('backbone');
+window.$ = require('jquery');
+window.jQuery = $;
 
-var newMusician = new musicianCollection();
-// var newMotion = new motionCollection();
+Parse.initialize('p5pjOUCZjobYEd8rUofEo9IkLessjDxRUsUtvp16', 'Tf3Rd4zjnI98dzkqlcEDVnJ2Pi3vHlumQR8blaHr');
 
-var musicianUrl = 'http://tiyfe.herokuapp.com/collections/bob-Skills-Up'
-// var musicianUrl = 'https://skills-up.herokuapp.com/musicians';
-// var motionUrl = 'https://skills-up.herokuapp.com/motioners';
+var NavigationComponent = require('./components/NavigationComponent');
+var HomeComponent = require('./components/HomeComponent');
+var ProductSearchComponent = require('./components/ProductSearchComponent');
+var ProfileComponent = require('./components/ProfileComponent');
+var MyListsComponent = require('./components/MyListsComponent');
 
-$(document).ready(function(){
-	var $musicianFilter = $('#musicianFilter');
-	var $musicianFilterButton=$('#musicianFilterButton');
-	// var $motionFilter = $('#motionFilter');
-	// var $motionFilterButton=$('#motionFilterButton');
-	var addUser = $('#addUser');
-	var $name=$('#name');
-	newMusician.on('add', function(newUser){
-		// newUser.save();
-		var user1= new musicianView({model: newUser});
-		// console.log('add workd');
-		$('#musiciansP').prepend(user1.$el);
-	});
 
-	
-	var $email=$('#email');
-	$('#newAccount').hide();
-	$('#logIn').hide();
-
+$(document).on('ready', function(){
 	var Router = Backbone.Router.extend({
 		routes: {
-			'' : 'goHome',
-			'account': 'findUser',
-			'collaborators': 'goMusic',//THIS IS MAKING THE INTER SCREEN NOT COME UP
-			'addUser': 'addUserScreen',
-			'musicians': 'goMusic',
-			'motioners': 'goMotion'
+			'': 'home',
+			'login': 'login',
+			'logout': 'home',
+			'productSearch(/:id)': 'productSearch',
+			'profile': 'profile',
+			'myLists': 'myLists'
 		},
-
-
-		goHome: function() {
-			$('section').hide();
-			$('#homePage').show();
-			$('.carousel').toggle('slow');
-			$('.logUserName').val('');
-			$('.logPassword').val('');
-			$('.error').text('');
+		home: function() {
+			$('#login').hide();
+			ReactDOM.render(<HomeComponent />,
+			document.getElementById('main'));
 		},
-
-		goColab: function () {
-			$('section').hide();
-			$('#collaborators').show();
-
+		login: function(){
+			$('#login').toggle('slow');
 		},
-		goMusic: function(){
-			$('section').hide();
-			$('#musiciansPage').show();
-			$('.showMusicians').show();
-			newMusician.fetch();
-	
+		productSearch: function(id){
+			ReactDOM.render(<ProductSearchComponent router={r} listId={id}/>,
+			document.getElementById('main'));
 		},
-		goMotion: function(){
-			$('section').hide();
-			$('#motionersPage').show();
-			// newMotion.fetch();
-			
+		profile: function(){
+			ReactDOM.render(<ProfileComponent router={r} />,
+			document.getElementById('main'));
 		},
-		findUser: function() {
-			$('section').hide();
-			$('#homePage').show();
-			$('#logIn').toggle('slow');
-			
-			
-		},
-		addUserScreen: function(){
-			$('section').hide();
-			$('#homePage').show();
-			$('#newAccount').toggle('slow');
-			window.scrollTo(0,0);
+		myLists: function(){
+			ReactDOM.render(<MyListsComponent router={r} />,
+			document.getElementById('main'));
 		}
-
-
 	});
 
-	var page = new Router ();
+	var r = new Router();
 	Backbone.history.start();
 
-	$('#carousel2').hide();
-    var t = setInterval(function(){
-		$('#carousel1').toggle('left');
-		$('#carousel2').toggle('right');
-	},3000);
-
-
-    $('#logInForm').on('submit', function(e){
-    	e.preventDefault();
-    	
-    	$.get(
-		'http://tiyfe.herokuapp.com/collections/bob-Skills-Up',
-		function(response) {
-
-			for (var j=0; j<response.length; j++){
-				
-				if ($('.logUserName').val()===''||$('.logPassword')===''){
-					$('.error').text('Please Fill Both Fields');
-					$('.logUserName').val('');
-					$('.logPassword').val('');
-				}
-				else if ($('.logUserName').val()===response[j].name && $('.logPassword').val()===response[j].password){
-					$('#logIn').hide();
-					$('.logUserName').val('');
-					$('.logPassword').val('');
-					$('.error').text('');
-					
-					
-				}
-				else{
-
-					$('.logPassword').val('');
-					$('.error').text('Name and/or Password does not match');
-				}
-			}
-			
-		},
-		'json'
-		);
-		window.location = '#musicians';
-    })
-
-	// var dropdownSelection = ('#instrument');
-
-	addUser.on('submit', function(e){
-		e.preventDefault();
-		var image = $('#userAvatar').val() || '../images/default_usr_icon_sm.png';
-		console.log(image);
-		if ($name.val()===''||$('#newPassword').val()===''||$email.val()===''||$('#aboutYou').val()===''){
-			$('.createError').text('Please fill out all fields')
-		}
-		else{
-			$.post(
-			'http://tiyfe.herokuapp.com/collections/bob-Skills-Up',
-			{
-				name: $name.val(),
-				password: $('#newPassword').val(),
-				instrument: $('#instrument').val(),
-				contact: $email.val(),
-				description: $('#aboutYou').val(),
-				img: image
-
-			}
-			).done(function(data){
-				$name.val('');
-				$email.val('');
-				$('section').hide();
-				$('#musiciansPage').show();
-				console.log('success!');
-				window.location = '#musicians';
-			});
-		}
-		
-
-	});
-
-	// newMotion.on('add', function(newUser){
-	// 	// newUser.save();
-	// 	var user1= new motionView({model: newUser});
-	// 	// console.log('add workd');
-	// 	$('#motionsP').append(user1.$el);
-	// });
-
-	$musicianFilterButton.on('click', function(){
-		// $('#musiciansP').html('');
-		
-		if ($musicianFilter.val().toString()===''){
-			$('.entry').show();
-		}
-		else{
-			$('.entry').hide();
-			$('.'+$musicianFilter.val().toString()+'').show();
-		}
-		
-	});
-	// $motionFilterButton.on('click', function(){
-	// 	// $('#musiciansP').html('');
-	// 	console.log($motionFilter.val().toString());
-	// 	if ($motionFilter.val().toString()===''){
-	// 		$('.entry').show();
-	// 	}
-	// 	else{
-	// 		$('.entry').hide();
-	// 		$('.'+$motionFilter.val().toString()+'').show();
-	// 	}
-		
-	// });
+	ReactDOM.render(
+		<NavigationComponent router={r} />,
+		document.getElementById('nav')
+	);
 })
-
-
-
-
-
-
 
