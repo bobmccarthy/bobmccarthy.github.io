@@ -7,7 +7,7 @@ var UserModel = require('../models/UserModel');
 var ListBoxComponent = require('./ListBoxComponent');
 var productQuery = new Parse.Query(ProductModel);
 var listQuery = new Parse.Query(ListModel);
-
+var array = [];
 
 
 module.exports = React.createClass({
@@ -20,8 +20,7 @@ module.exports = React.createClass({
 	},
 	componentWillMount: function(){
 		listQuery.find().then((lists) => {
-			// console.log(lists);
-			this.setState({lists: lists.reverse()});
+			this.setState({lists: lists});
 		});
 	},
 	render: function() {
@@ -29,7 +28,7 @@ module.exports = React.createClass({
 		var jibby = this.state.lists.map((list) => {
 			return (
 				
-				<div className="col-xs-12 col-sm-7">
+				<div className="col-xs-12 col-sm-8 col-sm-offset-2">
 					<ListBoxComponent model={list} id={list.id}/>
 				</div>
 					
