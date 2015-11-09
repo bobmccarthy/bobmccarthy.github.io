@@ -6,6 +6,7 @@ var ListModel = require('../models/ListModel');
 var ProductModel = require('../models/ProductModel');
 var productQuery = new Parse.Query(ProductModel);
 var listQuery = new Parse.Query(ListModel);
+var ListProductsModel = require('../models/ListProductsModel');
 
 var ProductBoxComponent = require('./ProductBoxComponent');
 var ListDropdownComponent= require('./ListDropdownComponent');
@@ -33,9 +34,10 @@ module.exports = React.createClass({
 		this.props.router.on('route', () => {
 			listQuery.equalTo('objectId', Backbone.history.getFragment().substring(14,24));
 			listQuery.find().then((list)=> {
-				list.map((list)=>{
+				list.map((listz)=>{
+					// console.log(listz);
 					this.setState({
-						listItems: list.get('products')
+						listItems: listz
 					})
 				})
 			});
@@ -44,9 +46,9 @@ module.exports = React.createClass({
 		// console.log(diet);
 		dietArray=Parse.User.current().get('dietArray');
 
-		productQuery.find().then((products) => {
-			this.setState({items: products});
-		});
+		// productQuery.find().then((products) => {
+		// 	this.setState({items: products});
+		// });
 		productQuery.equalTo('category', 'produce');
 		productQuery.notContainedIn('ingredients', dietArray);
 		productQuery.find().then((products) => {
@@ -77,47 +79,47 @@ module.exports = React.createClass({
 	
 	render: function() {
 		// console.log(this.state.listItems);
-		var listDropdown = <ListDropdownComponent callback={this.listChange} router={this.props.router}/>
-		var allElements = this.state.items.map((product) => {
-			return (
-				<ProductBoxComponent model={product} callback={this.onItemAdded} />
-			)
-		})
+		var listDropdown = <ListDropdownComponent key="listDropdownThingy" callback={this.listChange} router={this.props.router}/>
+		// var allElements = this.state.items.map((product) => {
+		// 	return (
+		// 		<ProductBoxComponent model={product} callback={this.onItemAdded} />
+		// 	)
+		// })
 		var produceElements = this.state.produce.map((product) => {
 			return (
-				<ProductBoxComponent model={product} callback={this.onItemAdded} />
+				<ProductBoxComponent key={product.id} model={product} callback={this.onItemAdded} />
 			);
 		})
 		var breadElements = this.state.breads.map((product) => {
 			return (
-				<ProductBoxComponent model={product} callback={this.onItemAdded} />
+				<ProductBoxComponent key={product.id} model={product} callback={this.onItemAdded} />
 			);
 		})
 		var dessertElements = this.state.desserts.map((product) => {
 			return (
-				<ProductBoxComponent model={product} callback={this.onItemAdded} />
+				<ProductBoxComponent key={product.id} model={product} callback={this.onItemAdded} />
 			);
 		})
 		var soupElements = this.state.soups.map((product) => {
 			return (
-				<ProductBoxComponent model={product} callback={this.onItemAdded} />
+				<ProductBoxComponent key={product.id} model={product} callback={this.onItemAdded} />
 			);
 		})
 		var snackElements = this.state.snacks.map((product) => {
 			return (
-				<ProductBoxComponent model={product} callback={this.onItemAdded} />
+				<ProductBoxComponent key={product.id} model={product} callback={this.onItemAdded} />
 			);
 		})
 		var internationalElements = this.state.international.map((product) => {
 			return (
-				<ProductBoxComponent model={product} callback={this.onItemAdded} />
+				<ProductBoxComponent key={product.id} model={product} callback={this.onItemAdded} />
 			);
 		})
 		return(
 			<div>
 				<div className="bottom-navbar row box-shadow--2dp">
 					<div className="storeLogo col-xs-12 col-sm-4 box-shadow--2dp">
-						<h2>FreshMarketFoos</h2>
+						<h2>FreshMarketFoods</h2>
 					</div>
 					<div className="col-xs-12 col-sm-8 row searches">
 						<div className="col-xs-6">
@@ -136,7 +138,9 @@ module.exports = React.createClass({
 				<div className="container-fluid listContainer">
 					<div className="row">
 						<h1 className="categoryTitle">Produce:</h1>
-						{produceElements}
+						
+							{produceElements}
+						
 					</div>
 					<div className="row">
 						<h1 className="categoryTitle">Breads:</h1>
@@ -166,18 +170,27 @@ module.exports = React.createClass({
 	},
 	onItemAdded: function(model){
 		// $('#button/'+model.id).css('background-color', 'red');
-		var list= new ListModel();
-		this.setState({
-			listItems: this.state.listItems+','+model.id
-		}
-		,()=>{
-			list.set('objectId', this.props.listId);
-			list.set('products', this.state.listItems);
-			list.save();
-		}
-		);
+		var list= new ListProductsModel();
+		list.set('theList', this.state.listItems);
+		list.set('theProducts', model);
+		list.save({
+			success: function(){
+				console.log('saved');
+			}
+		});
 	},
 	color: function(){
+
+		if (this.refs.searchBox.value==''){
+			$('.listItems').show();
+			$('.xtraMargin').css({'width':'25%'})
+		}
+		else{
+			$('.listItems').hide();
+			$('.'+this.refs.searchBox.value).show();
+			$('.xtraMargin').css({'width': '100%'});
+		}
+		
 		if (this.refs.searchBox.value==='1'){
 			console.log('1');
 			$('#body').css({'background-color': '#ECECEC'});
