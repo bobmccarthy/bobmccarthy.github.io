@@ -8,6 +8,8 @@ window.jQuery = $;
 
 Parse.initialize('p5pjOUCZjobYEd8rUofEo9IkLessjDxRUsUtvp16', 'Tf3Rd4zjnI98dzkqlcEDVnJ2Pi3vHlumQR8blaHr');
 
+var PPageComponent = require('./components/PPageComponent');
+
 var NavigationComponent = require('./components/NavigationComponent');
 var HomeComponent = require('./components/HomeComponent');
 var ProductSearchComponent = require('./components/ProductSearchComponent');
@@ -20,6 +22,7 @@ $(document).on('ready', function(){
 	var Router = Backbone.Router.extend({
 		routes: {
 			'': 'home',
+			'Gist': 'Ghome',
 			'login': 'login',
 			'logout': 'home',
 			'productSearch(/:id)': 'productSearch',
@@ -28,10 +31,17 @@ $(document).on('ready', function(){
 			'details/:id': 'details',
 			'addList': 'addList'
 		},
-		home: function() {
+		home: function(){
+			ReactDOM.render(<PPageComponent />,
+			document.getElementById('main'));
+		},
+		Ghome: function() {
 			$('#login').hide();
 			ReactDOM.render(<HomeComponent />,
 			document.getElementById('main'));
+			ReactDOM.render(
+			<NavigationComponent router={r} />,
+			document.getElementById('nav'));
 		},
 		login: function(){
 			$('#login').toggle('slow');
@@ -39,31 +49,42 @@ $(document).on('ready', function(){
 		productSearch: function(id){
 			ReactDOM.render(<ProductSearchComponent router={r} listId={id}/>,
 			document.getElementById('main'));
+			ReactDOM.render(
+			<NavigationComponent router={r} />,
+			document.getElementById('nav'));
 		},
 		profile: function(){
 			ReactDOM.render(<ProfileComponent router={r} />,
 			document.getElementById('main'));
+			ReactDOM.render(
+			<NavigationComponent router={r} />,
+			document.getElementById('nav'));
 		},
 		myLists: function(id){
 			ReactDOM.render(<MyListsComponent router={r} itemId={id}/>,
 			document.getElementById('main'));
+			ReactDOM.render(
+			<NavigationComponent router={r} />,
+			document.getElementById('nav'));
 		},
 		details: function(id){
 			ReactDOM.render(<ItemDetailsComponent router={r} itemId={id}/>,
 			document.getElementById('main'));
+			ReactDOM.render(
+			<NavigationComponent router={r} />,
+			document.getElementById('nav'));
 		},
 		addList: function(){
 			ReactDOM.render(<AddListComponent router={r} />,
 			document.getElementById('main'));
+			ReactDOM.render(
+			<NavigationComponent router={r} />,
+			document.getElementById('nav'));
 		}
 	});
 
 	var r = new Router();
 	Backbone.history.start();
 
-	ReactDOM.render(
-		<NavigationComponent router={r} />,
-		document.getElementById('nav')
-	);
 })
 
