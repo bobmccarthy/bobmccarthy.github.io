@@ -1,0 +1,554 @@
+body{
+	background-color: #525659;
+	margin: 60px 10px 10px 10px;
+}
+
+/*##################### Globals ######################*/
+.add-box-shadow{
+	-webkit-box-shadow: 1px 1px 20px 0px rgba(50, 50, 50, 0.6);
+	-moz-box-shadow:    1px 1px 20px 0px rgba(50, 50, 50, 0.6);
+	box-shadow:         1px 1px 20px 0px rgba(50, 50, 50, 0.6);
+	border: 1px solid #D0A50A;
+}
+.gold-banner-sm{
+	background-image: url("../images/gold_banner_300.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	height:28px;
+}
+.gold-banner-md{
+	background-image: url("../images/gold_banner_630.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	height:28px;
+}
+.gold-banner-lg{
+	background-image: url("../images/gold_banner_960.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	height:28px;
+}
+
+#primary-site-container {
+	/*width: 100%;*/
+	width: 990px;
+	/*height: 1000px;*/
+	margin: 0 auto;
+	padding: 10px 0 135px 0;
+	overflow: hidden;
+	/*------GRADIENT CODE------*/
+	background: #001446; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#00146E, #001446); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#00146E, #001446); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#00146E, #001446); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#00146E, #001446); /* Standard syntax */
+	/*background-color: #001446;*/
+	/*background-color: #00146E;*/
+}
+#secondary-site-container{
+	background-color: #FFFFFF;
+	width:100%;
+	padding: 5px 30px;
+	overflow: hidden;
+
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	/*But note this won't work in Internet Explorer below version 8.*/
+}
+
+
+/*###################### HEADER ########################*/
+.header{
+
+}
+.age-logo{
+	width:402px;
+}
+.header-right{
+	float: right;
+	text-align: right;
+}
+.header-right-text{
+	font-size: 18px;
+	font-family: Arial;
+	margin: 1px 0;
+}
+.header-right-images img{
+	height: 36px;
+	margin: 1px 0;
+}
+.header-right-images-each{
+	display: inline-block;
+	margin-left: 15px;
+}
+.header-right-search{
+	background-image: url("../images/search_bkgd.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	height:34px;
+	margin: 2px 0 0 0;
+}
+.header-right-search-bar{
+	padding: 0;
+	margin: 2px 4px 0 0;
+	border: none;
+	width: 252px;
+	height: 22px;
+	outline: none;
+}
+/*###################### END HEADER ####################*/
+
+
+
+/*########################## NAVBAR #####################*/
+.navbar{
+	font-family: futura;
+	border-top: 1px solid #D0A50A;
+	border-bottom: 5px solid #D0A50A;
+	padding: 4px 0 2px 0;
+	margin-bottom: 15px;
+
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	/*But note this won't work in Internet Explorer below version 8.*/
+}
+.navbar-link-home-img{
+	margin-bottom: -1px;
+	height: 15px;
+	width: 16px;
+}
+.navbar-link{
+	display: inline-block;
+	font-weight: bold;
+	color: #001446;
+	margin: 0 16px 0 12px;
+
+}
+.navbar-link-search{
+	float: right;
+	margin-right: 8px;
+}
+/*############################# END NAVBAR #################*/
+
+
+
+
+
+/*############################# left contanier #################*/
+.left-content{
+	width: 600px;
+	margin-right: 15px;
+	float: left;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	/*But note this won't work in Internet Explorer below version 8.*/
+}
+
+
+/*########################## SLIDE SHOW (billboard)#####################*/
+
+#nav-ctrl { z-index: 50; position: absolute; bottom: 25px; left: 210px }
+#pauseButton {position:relative; top:6px;}
+#resumeButton {position:relative; top:6px;left:-30px;}
+#prev2  { position: relative; top: 7px; left: -18px; width:15px; height:20px; text-decoration:none;}
+#next2  { position: relative; top: 7px; left: -28px; width:15px; height:20px; text-decoration:none; } 
+#bnav { display:inline;position: relative; left: -22px; }
+#bnav a { margin: 0 3px; padding: 1px 4px; border: 1px solid #fff; background: #999; text-decoration: none;	font-size: 11px;font-weight: bold; color:#fff; }
+#bnav a.activeSlide { background: #0000FF }
+#bnav a:focus { outline: none; }
+
+#frslideshow { height: 210px; width: 230px; margin-top: 15px; }
+#frslideshow a { text-decoration:none }
+#frnav-ctrl { z-index: 50; position: absolute; left:-20px;bottom: 15px;}
+#frpauseButton { position: relative; top: -5px;left:30px;}
+#frresumeButton { visibility: hidden; z-index: 10; position: relative; top: -5px; }
+#frprev2  { width:15px; height:20px; text-decoration:none;}
+#rnext2  { width:15px; height:20px; text-decoration:none; } 
+#frnav { display:inline; }
+#frnav a { position: relative; top:-11px;margin: 0 3px; padding: 1px 4px; border: 1px solid #fff; background: #999; text-decoration: none;font-size: 11px;font-weight: bold; color:#fff; }
+#frnav a.activeSlide { background: #00146E }
+#frnav a:focus { outline: none; }
+
+.slideshow-each-pic{
+	max-width: 600px;
+} 
+/*.jsok { display: none; }*/
+
+
+#billboard{
+	/*border: 1px solid black;*/
+	-webkit-box-shadow: 3px 3px 8px 0px rgba(50, 50, 50, 0.6);
+	-moz-box-shadow:    3px 3px 8px 0px rgba(50, 50, 50, 0.6);
+	box-shadow:         3px 3px 8px 0px rgba(50, 50, 50, 0.6);
+}
+
+/*########################## END SLIDE SHOW (billboard)#####################*/
+
+
+
+/*################################### coins and bullion ##########################*/
+
+.coinsbullion{
+	margin-top: 20px;
+	overflow: hidden;
+	padding: 0 0 20px 0;
+}
+
+.coinsbullion-banner-text{
+	font-size: 24px;
+	margin: 0 0 0 30px;
+	/*margin-left: 30px;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+  	-ms-transform: translateY(-50%);
+  	transform: translateY(-50%);*/
+}
+
+.coinsbullion-images{
+	overflow: hidden;
+	margin-bottom: 20px;
+	/*padding: 20px 0 0 0;*/
+}
+.coinsbullion-images-each{
+	text-align: center;
+	float: left;
+	width: 150px;
+	height: 170px;
+	margin: 20px 20px 0 20px;
+	padding: 10px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	/*But note this won't work in Internet Explorer below version 8.*/
+}
+.coinsbullion-images-each img{
+	max-width: 100%;
+
+}
+.coinsbullion-images-each-text{
+	margin-top: 10px;
+}
+
+/*######################### specials ############################*/
+
+.specials{
+	/*margin-top: 20px;*/
+	overflow: hidden;
+}
+
+.specials-banner-text{
+	font-size: 24px;
+	margin-left: 30px;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+  	-ms-transform: translateY(-50%);
+  	transform: translateY(-50%);
+}
+
+.specials-slidecontainer{
+	width: 600px;
+	padding: 20px 0 0 0;
+	overflow: hidden;
+
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	/*But note this won't work in Internet Explorer below version 8.*/
+}
+
+.specials-slidecontainer-leftarrow{
+	width: 15px;
+	height: 25px;
+	background-image: url("../images/gold_left_off.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	float:left;
+	margin-top: 110px;
+}
+.specials-slidecontainer-leftarrow:hover{
+	cursor: pointer;
+	background-image: url("../images/gold_left_on.png");
+}
+
+.specials-slidecontainer-rightarrow{
+	width: 15px;
+	height: 25px;
+	background-image: url("../images/gold_right_off.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	float:left;
+	margin-top: 110px;
+}
+.specials-slidecontainer-rightarrow:hover{
+	cursor: pointer;
+	background-image: url("../images/gold_right_on.png");
+}
+
+.specials-slidecontainer-each{
+	background-image: url("../images/specials-1.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 258px;
+	height: 240px;
+	float:left;
+	margin: 0 12px 25px 12px;
+}
+.specials-bottombanners{
+	margin: 0 0 10px 0;
+	overflow: hidden;
+	width: 600px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	/*But note this won't work in Internet Explorer below version 8.*/
+}
+.specials-bottombanners-left{
+	height: 90px;
+	width: 284px;
+	margin-right: 13px;
+	background-image: url("../images/investment-guide.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	float:left;
+}
+.specials-bottombanners-right{
+	height: 90px;
+	width: 280px;
+	margin-left: 13px;
+	background-image: url("../images/apmd.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	float:left;
+}	
+
+
+/*############################### what our customers say #######################*/
+.wcsay{
+	margin-top: 20px;
+}
+.wcsay-banner-text{
+	font-size: 24px;
+	margin-left: 30px;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+  	-ms-transform: translateY(-50%);
+  	transform: translateY(-50%);
+}
+.wcsay-container{
+	width: 600px;
+	padding: 20px 0;
+	overflow: hidden;
+
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	/*But note this won't work in Internet Explorer below version 8.*/
+}
+.wcsay-container-leftarrow{
+	width: 10px;
+	height: 20px;
+	background-image: url("../images/gold_left_off.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	float:left;
+	margin-top: 80px;
+}
+.wcsay-container-leftarrow:hover{
+	cursor: pointer;
+}
+.wcsay-container-rightarrow{
+	width: 10px;
+	height: 20px;
+	background-image: url("../images/gold_right_off.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	float:left;
+	margin-top: 80px;
+}
+.wcsay-container-rightarrow:hover{
+	cursor: pointer;
+}
+
+.wcsay-container-post{
+	/*background-image: url("../images/wcsay.png");*/
+	background-repeat: no-repeat;
+	float: left;
+	/*margin: 0 50px;*/
+	background-size: 100% 100%;
+	width: 600px;
+	height: 200px;
+}
+
+
+
+/*############################## RIGHT CONTAINER ##############################*/
+
+.right-content{
+	float: right;
+	width: 300px;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	/*But note this won't work in Internet Explorer below version 8.*/
+}
+
+/*############################## CURRENT SPOT PRICES ###########################*/
+
+.csprices-banner-text{
+	font-size: 24px;
+	margin-left: 30px;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+  	-ms-transform: translateY(-50%);
+  	transform: translateY(-50%);
+}
+.csprices-table{
+	background-image: url("../images/spot-prices-table.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	height:270px;
+	width:300px;
+}
+.csprices-graph{
+	background-image: url("../images/spot-prices-graph.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	height:190px;
+	width:300px;
+}
+.csprices-link{
+	width: 300px;
+	text-align: center;
+	margin: 5px 0 24px 0;
+}
+.csprices-link a{
+	color:#0000FF;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+
+/*############################## From the newsroom #####################*/
+
+.newsroom-banner-text{
+	font-size: 24px;
+	margin-left: 30px;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+  	-ms-transform: translateY(-50%);
+  	transform: translateY(-50%);
+}
+
+/*################################# featured rare coins ##########################*/
+
+.featuredcoins{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*#################################### about content ##################################*/
+
+.bottom-content{
+	width: 100%;
+	float: left;
+	/*margin: 10px auto;*/
+}
+
+.about-banner-text{
+	font-size: 24px;
+	margin-left: 30px;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+  	-ms-transform: translateY(-50%);
+  	transform: translateY(-50%);
+}
+.about-content{
+	overflow: hidden;
+}
+.about-content-text{
+	width: 740px;
+	float:left;
+}
+.about-content-text p{
+	font-size: 14px;
+	/*color: #00146E; light*/
+	color: #001446; 
+	line-height: 15px;
+
+}
+.about-content-right{
+		text-align: center;
+	height: 200px;
+	width: 180px;
+	float: right;
+	background-image: url("../images/WhyChooseAGE_bkgd.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin-top: 5px;
+}
+
+.about-content-right-title{
+	padding-bottom: 6px;
+	width: 130px;
+	margin: 21px 0 0 27px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #001446;
+	border-bottom: 4px solid #D0A50A;
+}
+.about-content-right-li{
+	background-image: url("../images/blue_arrow_select.png");
+	background-repeat: no-repeat;
+	background-size: 5% 75%;
+	text-align: left;
+	padding-left: 10px;
+	width: 130px;
+	font-size: 14px;
+	line-height: 14px;
+	margin: 12px 0 0 35px;
+}
+.about-content-right-a{
+	font-size: 14px;
+	color:#0000FF;
+	text-decoration: none;
+	font-weight: bold;
+	margin-top: 10px;
+}
+.about-content-right-a a{
+	color:#0000FF;
+	text-decoration: none;
+}
+
+
+

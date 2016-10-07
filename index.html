@@ -1,23 +1,307 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Bob Portfolio</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="./styles/main.sass.css">
-</head>
-<body>
-	<div id="body">
-		<div id="nav"></div>
-		<div id="main"></div>
-	</div>
+  <head>
+		<title>Gold Coins - Buy Gold Coins - American Gold Exchange</title>
 
-<script src="//www.parsecdn.com/js/parse-1.6.7.min.js"></script>
-<script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+		<meta charset="UTF-8">
+		<meta name="description" content="Buy gold coins, silver coins, and bullion at low prices with reliable service from AGE. Get gold price news, U.S. gold coin mintages, gold coin pics & info" />
+		<meta name="robots" content="index, follow" />
+		<meta name="GOOGLEBOT" content="INDEX, FOLLOW" />
+		<meta name="google-site-verification" content="4kdcGmzXNHmVPlm_uTH9crw61DxEZqfb58XkUyS46HA" />
 
-<script type="text/javascript" src="./scripts/bundle.js"></script>
+		<link rel="stylesheet" href="css/home.css" type="text/css">
+		<!-- <link rel="stylesheet" type="text/css" href="css/slideshow.css"> -->
+
+		
+
+  </head>
+  <body>
+		<div id="primary-site-container">
+			<div id="secondary-site-container">
+
+				<div class="header">
+					<img src="images/logo.png" class="age-logo">
+					<div class="header-right">
+						<div class="header-right-text">Questions? Call 1-800-613-9323</div>
+						<div class="header-right-images">
+							<div class="header-right-images-each"><img src="images/cart.png"></div>
+							<div class="header-right-images-each"><img src="images/BBB.png"></div>
+						</div>
+						<div class="header-right-search" style="display:none">
+							<input type="text" placeholder="Search Site" class="header-right-search-bar">
+						</div>
+					</div>
+				</div>
+
+				<div class="navbar">
+					<div class="navbar-link"><img class="navbar-link-home-img" src="images/home.png"></div>
+					<div class="navbar-link">Gold</div>
+					<div class="navbar-link">Silver</div>
+					<div class="navbar-link">Platinum & Palladium</div>
+					<div class="navbar-link">Hot Deals</div>
+					<div class="navbar-link">Newsroom</div>
+					<div class="navbar-link">Why AGE</div>
+					<div class="navbar-link">FAQ</div>		
+					<div class="navbar-link navbar-link-search"><img  onclick="show_search_input()" class="navbar-link-search-img" src="images/search.png"></div>
+					<script type="text/javascript">
+						function show_search_input() {
+							var search_bar = document.getElementsByClassName("header-right-search");
+							if (search_bar[0].style.display=="none" || search_bar[0].style.display==""){
+								search_bar[0].style.display = "block";
+							} else{
+								search_bar[0].style.display = "none";
+							}
+						}
+					</script>
+				</div>
+
+<!-- Begin left side content -->
+				<div class="left-content">
+				<!-- Begin slideshow -->
+					<div class="slideshow-container">
 
 
-</body>
+						<div id="billboard">
+							<div id="slideshow" class="pics" align="center">
+								<div id="nav-ctrl" class="jsok">
+									<!-- <a id="prev2" href="#"><img src="images/gray-arrow-lft.png" width="18" height="22" border="0" alt="gold coins - prev" /></a> -->
+									<div id="bnav"></div>
+									<!-- <a id="next2" href="#"><img src="images/gray-arrow.png" width="18" height="22" border="0" alt="gold coins - next" /></a> -->
+								</div>
+
+<!-- commented down from here -->
+
+								<!-- <li class="jsok" style="list-style-type: none"><img src="/images/billboard/labor-day.jpg" width="580" height="273" border="0" alt="Happy Labor Day -- Closed Monday" /></li>   -->
+ 								<!-- <li class="jsok" style="list-style-type: none"><img src="/images/billboard/thanksgiving.jpg" width="580" height="273" border="0" alt="Happy Thanksgiving -- Closed Thursday & Friday" /></li>   -->
+								<!-- <li class="jsok" style="list-style-type: none"><img src="/images/billboard/Hours-9-to-3-CT-Good-Friday.jpg" width="580" height="273" border="0" alt="OPen 9am to 3pm on Good Friday" /></li>  -->
+								<!-- <li class="jsok" style="list-style-type: none"><img src="/images/billboard/Independence-Day-2016.jpg" width="580" height="273" border="0" alt="Happy Independence Day! - Closed Monday" /></li>	 -->
+								<!-- <li class="jsok" style="list-style-type: none"><img src="/images/billboard/memorial-day.jpg" width="580" height="273" border="0" alt="Happy Memorial Day! - Closed Monday" /></li> -->	
+ 								<!-- <li class="jsok" style="list-style-type: none">
+ 									<div id="slide">
+										<div id="silver-centered">
+											<table border="0" cellspacing="0" cellpadding="3" width="560px" align="center" class="announce">
+											  <tr>
+											    <td align="center" width="45%"><hr /></td>
+											    <td align="center"><h3>Now&nbsp;Shipping!</h3></td>
+											    <td align="center" width="45%"><hr /></td>
+											  </tr>
+											</table>
+											<a href="http://amergold.com/vault/American_Eagles-Certified.php" style="text-decoration:none"><h1>2016 American Eagles - Certified
+											<h2>Gold Eagles, Gold Buffaloes, Silver Eagles</h2>
+											<table border="0" cellspacing="0" cellpadding="2" width="568" class="bottom">
+  											<tr valign="top">
+     											<td><a href="http://amergold.com/vault/American_Eagles-Certified.php" border="0"><img src="/vault/images/2016_GoldEagle_MS70_FS_115x150o.jpg" width="115" height="150" border="0" alt="2016 Gold Eagle MS70 obv" /></a></td>
+     											<td>
+        										<table border="0" cellspacing="0" cellpadding="4" class="bullets">
+          										<tr valign="top"><td class="bolder">&#8226;</td><td>Certified by PCGS and NGC in MS-69, MS-70</td></tr>
+		  												<tr valign="top"><td class="bolder">&#8226;</td><td>2016 coins to ship week of 2/8</td></tr>
+         											<tr valign="top"><td class="bolder">&#8226;</td><td>Earlier dates available now</td></tr>
+        										</table>
+        										<a href="http://amergold.com/vault/American_Eagles-Certified.php" style="text-decoration:none"><h4>Investors and Collectors!</h4></a>
+     											</td>
+     											<td><a href="http://amergold.com/vault/American_Eagles-Certified.php" border="0"><img src="/vault/images/2016_SilverEagle_NGC_MS69_ER_106x150o.jpg" width="106" height="154" border="0" alt="2016 Silver Eagle MS70 obv" /></a></td>
+  											</tr>
+											</table>
+										</div>
+									</div>
+								</li>   -->
+
+								<!-- <li class="jsok" style="list-style-type: none"><a href="/library/howtoorder.php"><img src="/images/billboard/billboad_online_shopping-9-15.jpg" width="580" height="273" border="0" alt="Buy Now Online!" /></a></li>  -->
+								
+<!-- commented up from here -->
+
+								<li class="jsok" style="list-style-type: none"><a href="/vault/commondate.php"><img class="slideshow-each-pic" src="images/billboard/1.png" height="275" border="0" alt="gold coins - common date" /></a></li>
+								<li class="jsok" style="list-style-type: none"><a href="/library/about.php"><img class="slideshow-each-pic" src="images/billboard/2.png" height="275" border="0" alt="gold coins - about AGE" /></a></li>
+								<!-- <li class="jsok" style="list-style-type: none"><a href="/vault/EuropeWorldGoldCoins.php"><img class="slideshow-each-pic" src="images/billboard/1.png"  height="273" border="0" alt="gold coins - Europe" /></a></li>	 -->
+								<!-- <li class="jsok" style="list-style-type: none"><a href="/library/howtoorder.php"><img class="slideshow-each-pic" src="images/billboard/1.png"  height="273" border="0" alt="gold coins - how to buy" /></a></li> -->
+								<!-- <li class="jsok" style="list-style-type: none"><a href="/library/howtosell.php"><img class="slideshow-each-pic" src="images/billboard/1.png" height="273" border="0" alt="gold coins - how to sell" /></a></li> -->
+							</div>
+							<noscript>
+							<!-- <img src="/images/billboard/xmas.jpg" width="580" height="273" border="0" alt="Happy Holidays! - Closed 12/24 and 12/31" />  -->
+							<img src="/images/billboard/1.jpg" width="580" height="273" border="0" alt="gold coins - common date" /> 
+							</noscript>
+						</div>
+					</div>
+					<!-- end Slideshow container -->
+					<div class="coinsbullion">
+						<div class="coinsbullion-banner gold-banner-md">
+							<div class="coinsbullion-banner-text">Coins and Bullion</div>
+						</div>
+						<!-- <div class="coinsbullion-images"> -->
+							<div class="coinsbullion-images-each" onmouseover="add_shadow_outline(this)" onmouseout="delete_shadow_outline(this)">
+								<img src="images/gold-collage.png">
+								<div class="coinsbullion-images-each-text">Gold</div>
+							</div>
+							<div class="coinsbullion-images-each" onmouseover="add_shadow_outline(this)" onmouseout="delete_shadow_outline(this)">
+								<img src="images/silver-collage.png">
+								<div class="coinsbullion-images-each-text">Silver</div>
+							</div>
+							<div class="coinsbullion-images-each" onmouseover="add_shadow_outline(this)" onmouseout="delete_shadow_outline(this)">
+								<img src="images/platinum-collage.png">
+								<div class="coinsbullion-images-each-text">Platinum and Palatium</div>
+							</div>
+						<!-- </div> -->
+					</div>
+					<script type="text/javascript">
+					function add_shadow_outline(x){
+						console.log(x.className);
+						x.className += " add-box-shadow";
+						x.style.cursor = "pointer";
+					}
+					function delete_shadow_outline(x){
+						console.log(x.className);
+						x.className = x.className.replace(" add-box-shadow", "");
+					}
+					</script>
+					<div class="specials">
+						<div class="specials-banner gold-banner-md">
+							<div class="specials-banner-text">Specials</div>
+						</div>
+						<div class="specials-slidecontainer">
+							<div class="specials-slidecontainer-leftarrow"></div>
+							<div class="specials-slidecontainer-each"></div>
+							<div class="specials-slidecontainer-each"></div>
+							<div class="specials-slidecontainer-rightarrow"></div>
+						</div>
+						<div class="specials-bottombanners">
+							<div class="specials-bottombanners-left"></div>
+							<div class="specials-bottombanners-right"></div>
+						</div>
+					</div>
+
+
+					<div class="wcsay">
+						<div class="wcsay-banner gold-banner-md">
+							<div class="wcsay-banner-text">What Our Customers Say</div>
+						</div>
+						<div class="wcsay-container">
+							<div class="wcsay-container-post">
+								<!-- // <script type="text/javascript" src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.sync.bootstrap.min.js"></script> -->
+								<div class="trustpilot-widget" data-locale="en-US" data-template-id="54ad5defc6454f065c28af8b" data-businessunit-id="55943b140000ff000580a057" data-style-height="220px" data-style-width="100%" data-theme="light" data-stars="4,5">
+								    <a href="https://www.trustpilot.com/review/amergold.com" target="_blank">Trustpilot</a>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+
+
+
+
+
+
+
+
+				</div> <!-- end left container -->
+
+<!-- begin right side container -->
+				<div class="right-content">
+					<div class="csprices">
+						<div class="csprices-banner gold-banner-sm">
+							<div class="csprices-banner-text">Current Spot Prices</div>
+						</div>
+						<div class="csprices-table"></div>
+						<div class="csprices-graph"></div>
+						<div class="csprices-link"><a href="">View Interactive Gold Price Chart »</a></div>
+					</div>
+					<div class="newsroom">
+						<div class="newsroom-banner gold-banner-sm">
+							<div class="newsroom-banner-text">From The Newsroom</div>
+						</div>
+					</div>
+
+
+
+
+					<!-- <div class="featuredcoins">
+						<div id="fcoins" class="jsok">
+						  <h5><a href="vault/FeaturedRareCoins.php">Featured Rare Coins</a> &nbsp;&nbsp;&nbsp;<A HREF="vault/FeaturedRareCoins.php" style="font-size: 10px;">view all >></A></h5>
+						  <table width="210" cellpadding="0" cellspacing="0" border="0">
+						    <tr>
+						      <td align="center" valign="top" width="107">
+
+						        <div id="frslideshow" class="pics">
+
+						          <table cellpadding="0" border="0" cellspacing="0" width="100%">
+						            <tr>
+						              <td align="center" valign="top">
+						                <a href="/vault/numisdetails.php?id=328198006&fr=1&type=fr"><img src="/vault/images/1903o10ln63328198006o.jpg" width=107 border=0 />&nbsp;&nbsp;<img src="/vault/images/1903o10ln63328198006r.jpg" width=107 border=0 /></a>
+						                <a href="/vault/numisdetails.php?id=328198006&fr=1&type=fr"><p>$10 Liberty Coronet Motto 1903-O MS-63 NGC<br />$2,975</p>
+						              </td>
+						            </tr>
+						          </table>
+						          <table cellpadding="0" border="0" cellspacing="0" width="100%">
+						            <tr>
+						              <td align="center" valign="top">
+						                <a href="/vault/numisdetails.php?id=003753329009&fr=1&type=fr"><img src="/vault/images/1856p20ln553753329009o.jpg" width=107 border=0 />&nbsp;&nbsp;<img src="/vault/images/1856p20ln553753329009r.jpg" width=107 border=0 /></a>
+						                <a href="/vault/numisdetails.php?id=003753329009&fr=1&type=fr"><p>$20 Liberty Type 1 1856 AU-55 NGC<br />$5,375</p>
+						              </td>
+						            </tr>
+						          </table>
+
+						          <div style="text-align:center;">
+						            <div id="frnav-ctrl">
+						              <input  id="frpauseButton" TYPE="image" src="/images/pause.png" width="27" height="20" border="0" alt="pause" />
+						              <input  id="frresumeButton" TYPE="image" src="/images/play.png" width="27" height="20" border="0" alt="play" />
+						              <a id="frprev2" href="#"><img src="/images/tiny-arrow-lft.gif" width="15" height="20" border="0" alt="back" /></a>
+						              <div id="frnav"></div>
+						              <a id="frnext2" href="#"><img src="/images/tiny-arrow.gif" width="15" height="20" border="0" alt="next" /></a>
+						            </div>
+						          </div>
+						        </div>
+						      </td>
+						    </tr>
+						  </table>
+						</div>
+					</div> -->
+
+
+
+
+
+				</div> <!-- end right container -->
+				<div class="bottom-content">
+					<div class="about">
+						<div class="about-banner gold-banner-lg">
+							<div class="about-banner-text">About AGE</div>
+						</div>
+					</div>
+					<div class="about-content">
+						<div class="about-content-text">
+							<p>Founded in 1998, American Gold Exchange is a leading national precious metals and rare coin company specializing in dealer-todealer trading and direct sales to the public. AGE draws upon a huge network of gold, silver, platinum and palladium suppliers in the U.S. and Europe. Our long-term relationships enable us reliably to offer an almost limitless inventory of highest-quality coins and bullion at extremely low prices. </p>
+							<p>At AGE, we put the customer first. Our prices on gold, silver, platinum, and palladium coins and bullion are always among the lowest in the industry, and our quality is the highest. Each classic gold and silver coin is hand-selected for superior collector desirability based on technical merit. Our account managers are specifically trained to take as much time as you need, regardless of portfolio size, until you feel comfortable and informed about the market and the benefits of our products. </p>
+							<p>As a result, we're pleased to say, an AGE customer is usually a customer for life! That's why AGE is recommended by Dr. Steve Sjuggerud's Daily Wealth, Peter Schiff of Euro Pacific Capital, and Mary Anne & Pamela Aden of The Aden Forecast as a trusted source for classic coins and bullion.</p>
+						</div>
+						<div class="about-content-right">
+							<div class="about-content-right-title">Why Choose Age?</div>
+							<div class="about-content-right-li">Outstanding value</div>
+							<div class="about-content-right-li">Highest quality</div>
+							<div class="about-content-right-li">Exceptional service</div>
+							<div class="about-content-right-li">Expert advice</div>
+							<div class="about-content-right-a"><a href="">Read More >></a></div>
+						</div>
+						
+					</div>
+				</div>
+
+
+
+				
+			</div> <!-- secondary site container -->
+
+		</div> <!-- primary site container -->
+
+
+			<!-- for the what customers say widget -->
+		<script type="text/javascript" src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.sync.bootstrap.min.js"></script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+		<!-- include jQuery library for slideshow-->
+		<script type="text/javascript" src="javascript/jquery_cycle/jquery-1.4.2.min.js"></script>
+		<!-- include Cycle plugin  for slideshow-->
+		<script type="text/javascript" src="javascript/jquery_cycle/jquery.cycle.all.min.js"></script>
+		<!--  initialize the slideshow when the DOM is ready -->
+		<script type="text/javascript" src="javascript/slideshow.js"></script>
+  </body>
 </html>
