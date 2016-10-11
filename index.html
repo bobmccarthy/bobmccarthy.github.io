@@ -35,13 +35,70 @@
 
 				<div class="navbar">
 					<div class="navbar-link"><img class="navbar-link-home-img" src="images/home.png"></div>
-					<div class="navbar-link">Gold</div>
-					<div class="navbar-link">Silver</div>
-					<div class="navbar-link">Platinum & Palladium</div>
-					<div class="navbar-link">Hot Deals</div>
-					<div class="navbar-link">Newsroom</div>
-					<div class="navbar-link">Why AGE</div>
-					<div class="navbar-link">FAQ</div>		
+
+					<div class="navbar-link" id="gold-link" onclick="navbar_toggle(this.id)">Gold</div>
+					<div class="navbar-link-dropdown" id="gold-link-dropdown">
+						<div class="navbar-link-dropdown-content" id="gold-link-dropdown-content" style="display:none">
+							<a href="">Some</a>
+							<a href="">page</a>
+							<a href="">to</a>
+							<a href="">click</a>
+						</div>
+					</div>
+					<div class="navbar-link" id="silver-link" onclick="navbar_toggle(this.id)">Silver</div>
+					<div class="navbar-link-dropdown" id="silver-link-dropdown">
+						<div class="navbar-link-dropdown-content" id="silver-link-dropdown-content" style="display:none">
+							<a href="">Some</a>
+							<a href="">page</a>
+							<a href="">to</a>
+							<a href="">click</a>
+						</div>
+					</div>
+					<div class="navbar-link" id="platinum-link" onclick="navbar_toggle(this.id)">Platinum & Palladium</div>
+					<div class="navbar-link-dropdown" id="platinum-link-dropdown">
+						<div class="navbar-link-dropdown-content" id="platinum-link-dropdown-content" style="display:none">
+							<a href="">Some</a>
+							<a href="">page</a>
+							<a href="">to</a>
+							<a href="">click</a>
+						</div>
+					</div>
+					<div class="navbar-link" id="deals-link" onclick="navbar_toggle(this.id)">Hot Deals</div>
+					<div class="navbar-link-dropdown" id="deals-link-dropdown">
+						<div class="navbar-link-dropdown-content" id="deals-link-dropdown-content" style="display:none">
+							<a href="">Some</a>
+							<a href="">page</a>
+							<a href="">to</a>
+							<a href="">click</a>
+						</div>
+					</div>
+					<div class="navbar-link" id="newsroom-link" onclick="navbar_toggle(this.id)">Newsroom</div>
+					<div class="navbar-link-dropdown" id="newsroom-link-dropdown">
+						<div class="navbar-link-dropdown-content" id="newsroom-link-dropdown-content" style="display:none">
+							<a href="">Some</a>
+							<a href="">page</a>
+							<a href="">to</a>
+							<a href="">click</a>
+						</div>
+					</div>
+					<div class="navbar-link" id="why-link" onhover="navbar_toggle(this.id)">Why AGE</div>
+					<div class="navbar-link-dropdown" id="why-link-dropdown">
+						<div class="navbar-link-dropdown-content" id="why-link-dropdown-content" style="display:none">
+							<a href="">Some</a>
+							<a href="">page</a>
+							<a href="">to</a>
+							<a href="">click</a>
+						</div>
+					</div>
+					<div class="navbar-link" id="faq-link" onclick="navbar_toggle(this.id)">FAQ</div>
+					<div class="navbar-link-dropdown" id="faq-link-dropdown">
+						<div class="navbar-link-dropdown-content" id="faq-link-dropdown-content" style="display:none">
+							<a href="">Some</a>
+							<a href="">page</a>
+							<a href="">to</a>
+							<a href="">click</a>
+						</div>
+					</div>
 					<div class="navbar-link navbar-link-search"><img  onclick="show_search_input()" class="navbar-link-search-img" src="images/search.png"></div>
 					<script type="text/javascript">
 						function show_search_input() {
@@ -50,6 +107,15 @@
 								search_bar[0].style.display = "block";
 							} else{
 								search_bar[0].style.display = "none";
+							}
+						}
+						function navbar_toggle(id){
+							var display = document.getElementById(id+"-dropdown-content");
+							if (display.style.display == "none") {
+								display.style.display = "block"
+							}
+							else{
+								display.style.display = "none"
 							}
 						}
 					</script>
@@ -260,7 +326,8 @@
 
 
 				</div> <!-- end right container -->
-				<div class="bottom-content">
+			</div> <!-- secondary site container -->
+			<div class="bottom-content">
 					<div class="about">
 						<div class="about-banner gold-banner-lg">
 							<div class="about-banner-text">About AGE</div>
@@ -284,10 +351,75 @@
 					</div>
 				</div>
 
+				<div class="footer">
+					<div class="footer-table">
+						<table cellspacing="10" border="0">
+							<tr>
+								<th>About Us</th>
+							</tr>
+							<tr><td>Why partner with AGE?</td></tr>
+							<tr><td>How to Buy </td></tr>
+							<tr><td>How to Sell?</td></tr>
+							<tr><td>How to Ship?</td></tr>
+							<tr><td>Sitemap</td></tr>
+						</table>
+						<table cellspacing="10" border="0">
+							<tr>
+								<th>Education</th>
+							</tr>
+							<tr><td>About Certified Coins</td></tr>
+							<tr><td>Our Definition of Value</td></tr>
+							<tr><td>U.S. Gold Coin Mintages</td></tr>
+							<tr><td>U.S. Gold Coin Types & Varieties</td></tr>
+							<tr><td>Interesting links</td></tr>
+						</table>
+						<table cellspacing="10" border="0">
+							<tr>
+								<th>Customer Care</th>
+							</tr>
+							<tr><td>Payment and Shipping Options</td></tr>
+							<tr><td>Guarantee & Returns</td></tr>
+							<tr><td>Terms & Conditions</td></tr>
+							<tr><td>Contact Us</td></tr>
+							<tr><td>FACEBOOK STUFF</td></tr>
+						</table>
+						<div class="footer-right">
+							NEWS YOU CAN USE
+						</div>
+					</div>
+					<div class="footer-logos">
+						<div class="footer-logos-each">
+							<img src="" />Each Logo
+						</div>
+						<div class="footer-logos-each">
+							<img src="" />Each Logo
+						</div>
+						<div class="footer-logos-each">
+							<img src="" />Each Logo
+						</div>
+						<div class="footer-logos-each">
+							<img src="" />Each Logo
+						</div>
+						<div class="footer-logos-each">
+							<img src="" />Each Logo
+						</div>
+						<div class="footer-logos-each">
+							<img src="" />Each Logo
+						</div>
+						<div class="footer-logos-each">
+							<img src="" />Each Logo
+						</div>
+						<div class="footer-logos-each">
+							<img src="" />Each Logo
+						</div>
+					</div>
+						
+					
 
 
-				
-			</div> <!-- secondary site container -->
+				</div>
+
+
 
 		</div> <!-- primary site container -->
 
