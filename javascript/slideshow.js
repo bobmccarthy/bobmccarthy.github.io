@@ -42,6 +42,7 @@ function main() {
 		document.getElementById('frresumeButton').style.visibility='hidden';
 	});
 	$('.jsok').show();
+	$('#bnav a').html('');
 };
 main();
   
