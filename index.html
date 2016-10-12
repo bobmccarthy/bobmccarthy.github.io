@@ -330,22 +330,22 @@
 									</tr>
 								</thead>
 								<tbody>
-									<tr class="selected">
+									<tr class="selected-row" id="gold-row" onclick="change_row_background(this.id)">
 										<td><span>Gold</span></td>
 										<td></td>
 										<td></td>
 									</tr>
-									<tr>
+									<tr class="" id="silver-row" onclick="change_row_background(this.id)">
 										<td><span>Silver</span></td>
 										<td></td>
 										<td></td>
 									</tr>	
-									<tr>
+									<tr class="" id="platinum-row" onclick="change_row_background(this.id)">
 										<td><span>Platinum</span></td>
 										<td></td>
 										<td></td>
 									</tr>
-									<tr>
+									<tr class="" id="palladium-row" onclick="change_row_background(this.id)">
 										<td><span>Palladium</span></td>
 										<td></td>
 										<td></td>
@@ -356,7 +356,15 @@
 						<div class="csprices-graph"></div>
 						<div class="csprices-link"><a href="">View Interactive Gold Price Chart »</a></div>
 					</div>
+					<script type="text/javascript">
+					function change_row_background(id){
+						array = document.getElementsByClassName("selected-row")
+						array[0].className = "";
+						var x = document.getElementById(id);
+						x.className = "selected-row";
 
+					}
+					</script>
 
 
 
