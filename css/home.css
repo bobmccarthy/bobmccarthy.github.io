@@ -226,7 +226,9 @@ body{
 	max-width: 600px;
 } 
 /*.jsok { display: none; }*/
-
+.jsok a img{
+	background-color: #001446;
+}
 
 #billboard{
 	/*border: 1px solid black;*/
@@ -463,11 +465,34 @@ body{
   	transform: translateY(-50%);
 }
 .csprices-table{
-	background-image: url("../images/spot-prices-table.png");
+	/*background-image: url("../images/spot-prices-table.png");
 	background-repeat: no-repeat;
-	background-size: 100% 100%;
+	background-size: 100% 100%;*/
 	height:270px;
 	width:300px;
+
+}
+.csprices-table table thead tr {
+	text-align: left;
+	height: 45px;
+	color: #999999;
+}
+.csprices-table table tbody tr{
+	text-align: left;
+	height: 42px;
+	color: black;
+
+}
+.csprices-table table tbody tr td{
+
+	padding: 0 0 0 5px;
+}
+.csprices-table table tbody .selected{
+	background-color: #001247;
+	color: white;
+}
+.csprices-table table tbody span:hover{
+	cursor: pointer;
 }
 .csprices-graph{
 	background-image: url("../images/spot-prices-graph.png");
