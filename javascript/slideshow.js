@@ -1,8 +1,7 @@
 // ################ Slideshow js ###################
 
 
-
-function main() {
+$(document).ready(function() {
     $('#slideshow').cycle({
         fx:     'scrollLeft',
         timeout: 8000,
@@ -41,8 +40,14 @@ function main() {
 		document.getElementById('frpauseButton').style.visibility='visible';
 		document.getElementById('frresumeButton').style.visibility='hidden';
 	});
+	// $('.jsok-placeholder').hide();
 	$('.jsok').show();
 	$('#bnav a').html('');
-};
-main();
-  
+	
+
+});
+
+
+	
+
+

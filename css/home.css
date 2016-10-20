@@ -58,6 +58,22 @@ body{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*###################### HEADER ########################*/
 .header{
 
@@ -98,6 +114,21 @@ body{
 	outline: none;
 }
 /*###################### END HEADER ####################*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -172,6 +203,23 @@ body{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*############################# left contanier #################*/
 .left-content{
 	width: 600px;
@@ -184,7 +232,35 @@ body{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*########################## SLIDE SHOW (billboard)#####################*/
+
+
 
 #nav-ctrl { z-index: 50; position: absolute; bottom: 25px; left: 210px }
 #pauseButton {position:relative; top:6px;}
@@ -241,6 +317,26 @@ body{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*################################### coins and bullion ##########################*/
 
 .coinsbullion{
@@ -287,6 +383,25 @@ body{
 .coinsbullion-images-each-text{
 	margin-top: 3px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*######################### specials ############################*/
 
@@ -345,13 +460,17 @@ body{
 }
 
 .specials-slidecontainer-each{
-	background-image: url("../images/specials-1.png");
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	width: 258px;
-	height: 240px;
+	border: 1px solid #D0A50A;
+	width: 256px;
+	height: 238px;
 	float:left;
 	margin: 0 12px 25px 12px;
+}
+.specials-slidecontainer-each-lr{
+	margin-top: 12px;
+}
+.specials-slidecontainer-each-ud{
+/*height: 26px;*/
 }
 .specials-bottombanners{
 	margin: 0 0 10px 0;
@@ -380,6 +499,29 @@ body{
 	background-size: 100% 100%;
 	float:left;
 }	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*############################### what our customers say #######################*/
@@ -442,6 +584,24 @@ body{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*############################## RIGHT CONTAINER ##############################*/
 
 .right-content{
@@ -452,6 +612,19 @@ body{
 	box-sizing: border-box;         /* Opera/IE 8+ */
 	/*But note this won't work in Internet Explorer below version 8.*/
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*############################## CURRENT SPOT PRICES ###########################*/
 
@@ -470,6 +643,7 @@ body{
 	background-size: 100% 100%;*/
 	height:270px;
 	width:300px;
+	border-collapse: collapse; 
 
 }
 .csprices-table table thead tr {
@@ -477,16 +651,21 @@ body{
 	height: 45px;
 	color: #999999;
 }
+.csprices-table table thead tr th{
+	border-bottom: 1px solid #D0A50A;
+	border-bottom: 1px solid rgba(208,165,10,0.3)
+}
 .csprices-table table tbody tr{
 	text-align: left;
 	height: 42px;
 	color: black;
-
 }
 .csprices-table table tbody tr td{
-
+	border-bottom: 1px solid #D0A50A;
+	border-bottom: 1px solid rgba(208,165,10,0.3);
 	padding: 0 0 0 5px;
 }
+
 .csprices-table table tbody .selected-row{
 	background-color: #001247;
 	color: white;
@@ -513,8 +692,28 @@ body{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*############################## From the newsroom #####################*/
 
+.newsroom{
+	margin-top: 50px;
+}
 .newsroom-banner-text{
 	font-size: 24px;
 	margin-left: 30px;
@@ -524,11 +723,15 @@ body{
   	-ms-transform: translateY(-50%);
   	transform: translateY(-50%);
 }
-
-/*################################# featured rare coins ##########################*/
-
-.featuredcoins{
-
+.newsroom-section{
+	height: 98px;
+	border-top: 1px solid #D0A50A;
+}
+.newsroom-section h3{
+	margin-top: 10px;
+}
+.newsroom-section-first{
+	border-top: none;
 }
 
 
@@ -544,6 +747,20 @@ body{
 
 
 
+
+
+
+
+
+
+
+
+
+/*################################# featured rare coins ##########################*/
+
+.featuredcoins{
+
+}
 
 
 
@@ -631,6 +848,29 @@ body{
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*#################################### FOOTER ##############################*/
 
 .footer{
@@ -640,19 +880,30 @@ body{
 }
 .footer-table{
 	border-top: 5px solid #D0A50A;
-	padding-top: 20px;
+	padding-top: 10px;
 	border-bottom: 2px solid #D0A50A;
-	padding-bottom: 10px;
+	padding-bottom: 15px;
 }
 .footer-table table{
 	margin: 0;
 	width: 230px;
 	display: inline-block;
-	height: 100%;
+	height: 181px;
 	margin-left: -10px;
 }
 .footer-table table:first-child{
 	width: 190px;
+}
+.footer-table table:last-child{
+	display: block;
+	height: 160px;
+}
+.footer-table-div{
+	margin: 0;
+	width: 230px;
+	display: inline-block;
+	height: 200px;
+	margin-left: -10px;
 }
 .footer-table th{
 	color: #BF8E16;
@@ -660,17 +911,96 @@ body{
 	font-size: 16px;
 }
 .footer-table tr{
-	font-size: 13px;
+	font-size: 14px;
 }
 .footer-table tr td a{
 	text-decoration: none;
 	color: #001446;
 }
+
+#social-iframe{
+	float: left;
+	margin-top: -14px;
+	width:10px;
+}
+.social-text{
+	float: left;
+	width:75px;
+	margin: -13px 5px 0 5px;
+	font-size: 12px;
+}
+.social-text a{
+	text-decoration: none;
+	color: #001446;
+}
+.social-fblogo{
+	float: left;
+	margin-top: -20px;
+}
+.social-coin{
+	float: left;
+	margin: -21px 0 0 -14px;
+}
+.social-coin img{
+	height: 46px;
+}
 .footer-right{
 	float: right;
-	margin-right: 60px;
+	width: 250px;
 	color: #BF8E16;
+	margin-top: 10px;
+
 }
+.footer-right-row{
+	color: #001446;
+	font-size: 14px;
+	margin-bottom: 12px;
+	width: 100%;
+}
+.footer-right-row:first-child{
+	font-weight: bold;
+	color: #BF8E16;
+	font-size: 16px;
+	margin-bottom: 12px;
+}
+
+.footer-right-input{
+	width: 100%;
+	padding:5px;
+	border: 1px solid #D0A50A;
+	color: #D0A50A;
+	outline: none;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	/*But note this won't work in Internet Explorer below version 8.*/
+}
+.footer-right-submitbtn{
+	text-align: right;
+}
+.footer-right-submitbtn button{
+	height: 33px;
+	width: 90px;
+	border: none;
+	font-size: 14px;
+	font-weight: bold;
+	color: white;
+	margin-top: 3px;
+	background: #001446; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#00146E, #001446); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#00146E, #001446); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#00146E, #001446); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#00146E, #001446); /* Standard syntax */
+}
+.footer-right-space{
+	height: 10px;
+	width: 20px;
+	background-color: white;
+	float: right;
+	margin-right: 90px;
+	margin-top: -10px;
+}
+
 .footer-logos{
 	margin:15px 0;
 	background-image: url("../images/logo_footer.png");
