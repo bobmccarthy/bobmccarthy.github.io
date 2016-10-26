@@ -1,6 +1,7 @@
 body{
 	background-color: #fff;
 	margin: 0 10px 0px 10px;
+	font-family: sans-serif;
 }
 
 /*##################### Globals ######################*/
@@ -97,6 +98,16 @@ body{
 .header-right-images-each{
 	display: inline-block;
 	margin-left: 15px;
+	position: relative;
+}
+.header-right-images-each-cartamt{
+	position: absolute;
+	bottom: 21px;
+	font-weight: bold;
+	left: 16px;
+	color: white;
+	font-size: 13px;
+	font-family: sans-serif;
 }
 .header-right-search{
 	background-image: url("../images/search_bkgd.png");
@@ -223,7 +234,7 @@ body{
 /*############################# left contanier #################*/
 .left-content{
 	width: 600px;
-	margin-right: 15px;
+	margin-right: 10px;
 	float: left;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
@@ -260,7 +271,13 @@ body{
 
 /*########################## SLIDE SHOW (billboard)#####################*/
 
-
+#billboard{
+	width: 590px;
+}
+#slideshow{
+	width: 590px;
+	height: 287px;
+}
 
 #nav-ctrl { z-index: 50; position: absolute; bottom: 25px; left: 210px }
 #pauseButton {position:relative; top:6px;}
@@ -421,15 +438,18 @@ body{
 }
 
 .specials-slidecontainer{
+	height: 284px;
 	width: 600px;
 	padding: 20px 0 0 0;
 	overflow: hidden;
-
+	position: relative;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
 	box-sizing: border-box;         /* Opera/IE 8+ */
 	/*But note this won't work in Internet Explorer below version 8.*/
 }
+
+
 
 .specials-slidecontainer-leftarrow{
 	width: 15px;
@@ -437,8 +457,7 @@ body{
 	background-image: url("../images/gold_left_off.png");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-	float:left;
-	margin-top: 110px;
+	
 }
 .specials-slidecontainer-leftarrow:hover{
 	cursor: pointer;
@@ -451,13 +470,55 @@ body{
 	background-image: url("../images/gold_right_off.png");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-	float:left;
-	margin-top: 110px;
+	
 }
 .specials-slidecontainer-rightarrow:hover{
 	cursor: pointer;
 	background-image: url("../images/gold_right_on.png");
 }
+.slide{
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	/*But note this won't work in Internet Explorer below version 8.*/
+}
+
+.slide > img{
+	height: 220px;
+	width:244px;
+}
+.slide-content{
+	padding-top: 36px;
+	height: 220px;
+	width:244px;
+	overflow: hidden;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+	/*But note this won't work in Internet Explorer below version 8.*/
+}
+.slide-content-title{
+	font-size: 14px;
+	font-weight: bold;
+	padding: 1px 0;
+	color:#001446;
+}
+.slide-content-descriptor{
+	font-size: 13px;
+	font-weight: bold;
+	padding: 1px 0;
+	color:#C42125;
+}
+.slide-content-lower{
+	font-size: 13px;
+	width: 100%;
+	font-weight: bold;
+	padding: 1px 0;
+	color:#C08F00;
+	position: absolute;
+	bottom: 5px;
+}
+
 
 .specials-slidecontainer-each{
 	border: 1px solid #D0A50A;
@@ -465,13 +526,13 @@ body{
 	height: 238px;
 	float:left;
 	margin: 0 12px 25px 12px;
+	position: 
 }
 .specials-slidecontainer-each-lr{
 	margin-top: 12px;
+	position: absolute;
 }
-.specials-slidecontainer-each-ud{
-/*height: 26px;*/
-}
+
 .specials-bottombanners{
 	margin: 0 0 10px 0;
 	overflow: hidden;
@@ -493,7 +554,7 @@ body{
 .specials-bottombanners-right{
 	height: 90px;
 	width: 280px;
-	margin-left: 13px;
+	margin-left: 9px;
 	background-image: url("../images/apmd.png");
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
@@ -605,6 +666,10 @@ body{
 /*############################## RIGHT CONTAINER ##############################*/
 
 .right-content{
+	border-left: 1px solid #D0A50A;
+	border-left: 1px solid rgba(208,165,10,0.3);
+    padding-left: 15px;
+    margin-right: 15px;
 	float: right;
 	width: 300px;
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
@@ -674,9 +739,9 @@ body{
 	cursor: pointer;
 }
 .csprices-graph{
-	background-image: url("../images/spot-prices-graph.png");
+	/*background-image: url("../images/spot-prices-graph.png");
 	background-repeat: no-repeat;
-	background-size: 100% 100%;
+	background-size: 100% 100%;*/
 	height:190px;
 	width:300px;
 }
@@ -712,7 +777,7 @@ body{
 /*############################## From the newsroom #####################*/
 
 .newsroom{
-	margin-top: 50px;
+	margin-top: 35px;
 }
 .newsroom-banner-text{
 	font-size: 24px;
@@ -727,8 +792,13 @@ body{
 	height: 98px;
 	border-top: 1px solid #D0A50A;
 }
-.newsroom-section h3{
+.newsroom-section h4{
 	margin-top: 10px;
+	margin-bottom: 1px;
+}
+.newsroom-section-text{
+	width: 100%;
+	font-size: 13px;
 }
 .newsroom-section-first{
 	border-top: none;
@@ -806,13 +876,14 @@ body{
 }
 .about-content-right{
 	text-align: center;
-	height: 200px;
+	height: 210px;
 	width: 180px;
 	float: right;
 	background-image: url("../images/WhyChooseAGE_bkgd.png");
 	background-repeat: no-repeat;
-	background-size: 100%;
+	background-size: 100% 108%;
 	margin-top: 5px;
+	margin-right: -10px;
 }
 
 .about-content-right-title{
@@ -833,7 +904,7 @@ body{
 	width: 130px;
 	font-size: 14px;
 	line-height: 14px;
-	margin: 12px 0 0 35px;
+	margin: 12px 0 0 30px;
 }
 .about-content-right-a{
 	font-size: 14px;

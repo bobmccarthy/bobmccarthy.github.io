@@ -10,10 +10,10 @@
 		<meta name="google-site-verification" content="4kdcGmzXNHmVPlm_uTH9crw61DxEZqfb58XkUyS46HA" />
 
 		<link rel="stylesheet" href="css/home.css" type="text/css">
-		<!-- <link rel="stylesheet" type="text/css" href="css/slideshow.css"> -->
+		<link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css">
 
   </head>
-  <body>
+  <body style="display:none">
 		<div id="primary-site-container">
 			<div id="secondary-site-container">
 
@@ -26,7 +26,9 @@
 					<div class="header-right">
 						<div class="header-right-text">Questions? Call 1-800-613-9323</div>
 						<div class="header-right-images">
-							<div class="header-right-images-each"><img src="images/cart.png"></div>
+							<div class="header-right-images-each"><img src="images/cart.png">
+								<div class="header-right-images-each-cartamt">2</div>
+							</div>
 							<div class="header-right-images-each"><img src="images/BBB.png"></div>
 						</div>
 						<div class="header-right-search" style="display:none">
@@ -216,21 +218,88 @@
 
 
 
-
+					
 					<div class="specials">
 						<div class="specials-banner gold-banner-md">
 							<div class="specials-banner-text">Specials</div>
 						</div>
 						<div class="specials-slidecontainer">
-							<div class="specials-slidecontainer-leftarrow"></div>
-							<div class="specials-slidecontainer-each">
-								<div class="specials-slidecontainer-each-lr"><img height="25px" src="images/new1.png"></div>
 
+							<div class="slider2">
+								<div class="slide">
+									<div class="specials-slidecontainer-each-lr">
+										<img height="25px" src="images/new1.png">
+									</div>
+									<div class="slide-content" align="center">
+										<div class="slide-content-title">$20 Saint-Goudins gold coins</div>
+										<div class="slide-content-title">(MS64)</div>
+										<div class="slide-content-descriptor">Premium near 20-yr low!</div>
+										<img height="95px" width="205"src="images/double-coin.png">
+										<div class="slide-content-lower">AGE investor alert!</div>
+									</div>
+									<!-- <img src="images/specials-1.png"> -->
+								</div>
+								<div class="slide">
+									<div class="specials-slidecontainer-each-lr">
+										<img height="25px" src="images/new1.png">
+									</div>
+									<div class="slide-content" align="center">
+										<div class="slide-content-title">$200 Some other gold coins</div>
+										<div class="slide-content-title">Buy Me</div>
+										<div class="slide-content-descriptor">Premium qulaity!</div>
+										<img height="95px" width="205"src="images/double-coin.png">
+										<div class="slide-content-lower">AGE yes alert!</div>
+									</div>
+									<!-- <img src="images/specials-1.png"> -->
+								</div><div class="slide">
+									<div class="specials-slidecontainer-each-lr">
+										<img height="25px" src="images/new1.png">
+									</div>
+									<div class="slide-content" align="center">
+										<div class="slide-content-title">$20 St. Goudins gold coins</div>
+										<div class="slide-content-title">(MS64)</div>
+										<div class="slide-content-descriptor">Premium near 20-yr low!</div>
+										<img height="95px" width="205"src="images/double-coin.png">
+										<div class="slide-content-lower">AGE investor alert!</div>
+									</div>
+									<!-- <img src="images/specials-1.png"> -->
+								</div><div class="slide">
+									<div class="specials-slidecontainer-each-lr">
+										<img height="25px" src="images/new1.png">
+									</div>
+									<div class="slide-content" align="center">
+										<div class="slide-content-title">$20 St. Goudins gold coins</div>
+										<div class="slide-content-title">(MS64)</div>
+										<div class="slide-content-descriptor">Premium near 20-yr low!</div>
+										<img height="95px" width="205"src="images/double-coin.png">
+										<div class="slide-content-lower">AGE investor alert!</div>
+									</div>
+									<!-- <img src="images/specials-1.png"> -->
+								</div>
 							</div>
+
+							
+							
+
+							<!-- <div class="specials-slidecontainer-each">
+								<div class="specials-slidecontainer-each-lr">
+									<img height="25px" src="images/new1.png">
+								</div>
+							</div>
+
 							<div class="specials-slidecontainer-each">
-								<div class="specials-slidecontainer-each-ud"><img height="60px" src="images/new2.png"></div>
+								<div class="specials-slidecontainer-each-lr">
+									<img height="25px" src="images/new1.png">
+								</div>
 							</div>
-							<div class="specials-slidecontainer-rightarrow"></div>
+
+							<div class="specials-slidecontainer-each" style="display:none">
+								<div class="specials-slidecontainer-each-lr">
+									<img height="25px" src="images/new1.png">
+								</div>
+							</div> -->
+
+							<!-- <div class="specials-slidecontainer-rightarrow"></div> -->
 						</div>
 						<div class="specials-bottombanners">
 							<a href="/vault/Free_Investment_Guide.php"><div class="specials-bottombanners-left"></div></a>
@@ -284,6 +353,7 @@
 							<div class="csprices-banner-text">Current Spot Prices</div>
 						</div>
 						<div class="csprices-table">
+
 							<table cellspacing="0">
 								<thead>
 									<tr>
@@ -295,28 +365,93 @@
 								<tbody>
 									<tr class="selected-row" id="gold-row" onclick="change_row_background(this.id)">
 										<td><span>Gold</span></td>
-										<td></td>
+										<td><img align="right" src="images/red_arrow_down.png"></td>
 										<td></td>
 									</tr>
 									<tr class="" id="silver-row" onclick="change_row_background(this.id)">
 										<td><span>Silver</span></td>
-										<td></td>
+										<td><img align="right" src="images/red_arrow_down.png"></td>
 										<td></td>
 									</tr>	
 									<tr class="" id="platinum-row" onclick="change_row_background(this.id)">
 										<td><span>Platinum</span></td>
-										<td></td>
+										<td><img align="right" src="images/red_arrow_down.png"></td>
 										<td></td>
 									</tr>
 									<tr class="" id="palladium-row" onclick="change_row_background(this.id)">
 										<td><span>Palladium</span></td>
-										<td></td>
-										<td></td>
+										<td><img align="right" src="images/red_arrow_down.png"></td>
+										<td id=""></td>
 									</tr>
 								</tbody>
 							</table>
+							
 						</div>
-						<div class="csprices-graph"></div>
+						
+<!-- GRAPH TEST AREA START -->
+
+						<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	
+
+						<script type="text/javascript">	
+						$(function () {
+
+							$.getJSON('/charts/data_year.php', function(data) {
+							// Create the chart
+								$('#joechart').highcharts('StockChart', {
+
+
+								credits : {
+									enabled : false
+								},
+								rangeSelector : {
+									enabled : false
+								},
+								yAxis: {
+									floor: 1100,
+									ceiling: 1350
+								},
+								navigation: {
+									buttonOptions: {
+										enabled: false
+									}
+								},
+								navigator: {
+									enabled: false
+								},
+								scrollbar : {
+									enabled: false
+								},
+								chart : {
+									width : 300,
+									height : 190,
+									type : 'area',
+								},
+
+								series : [{
+									name : 'GOLD',
+									data : data,
+									color : '#f5dd6f',
+									tooltip: {
+										valueDecimals: 2
+									}
+								}]
+								});
+							});
+
+						});
+
+						</script>
+
+						<script src="https://code.highcharts.com/stock/highstock.js"></script>
+						<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+
+						<div id="joechart" style="height: 190px; min-width: 300px"></div>
+
+<!-- GRAPH TEST AREA END -->
+						
+	
+
 						<div class="csprices-link"><a href="">View Interactive Gold Price Chart »</a></div>
 					</div>
 					<script type="text/javascript">
@@ -339,16 +474,28 @@
 							<div class="newsroom-banner-text">From The Newsroom</div>
 						</div>
 						<div class="newsroom-section newsroom-section-first">
-							<h3>AGE Daily Gold Update</h3>
+							<h4>AGE Daily Gold Update</h4>
+							<div class="newsroom-section-text">
+								<p><strong>8/5:</strong> Here is a line of text for display purposes.</p>
+							</div>
 						</div>
 						<div class="newsroom-section">
-							<h3>AGE Gold Commentary</h3>
+							<h4>AGE Gold Commentary</h4>
+							<div class="newsroom-section-text">
+								<p><strong>8/5:</strong> Another line for a placeholder, add more "p" tags</p>
+							</div>
 						</div>
 						<div class="newsroom-section">
-							<h3>AGE Investor Alert!</h3>
+							<h4>AGE Investor Alert!</h4>
+							<div class="newsroom-section-text">
+								<p><strong>8/5:</strong> Another line for a placeholder jdvklsd sdvlhsd</p>
+							</div>
 						</div>
 						<div class="newsroom-section ">
-							<h3>Gold Headlines</h3>
+							<h4>Gold Headlines</h4>
+							<div class="newsroom-section-text">
+								<p>Another line for a placeholder. If it is too long, it will go behind the element under this.</p>
+							</div>
 						</div>
 					</div>
 
@@ -511,18 +658,21 @@
 
 
 		</div> <!-- primary site container -->
-
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
 			<!-- for the what customers say widget -->
 		<script type="text/javascript" src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.sync.bootstrap.min.js"></script>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-
 		<!-- include jQuery library for slideshow-->
-		<script type="text/javascript" src="javascript/jquery_cycle/jquery-1.4.2.min.js"></script>
+		<!-- // <script type="text/javascript" src="javascript/jquery_cycle/jquery-1.4.2.min.js"></script> -->
 		<!-- include Cycle plugin  for slideshow-->
 		<script type="text/javascript" src="javascript/jquery_cycle/jquery.cycle.all.min.js"></script>
 		<!--  initialize the slideshow when the DOM is ready -->
 		<script type="text/javascript" src="javascript/slideshow.js"></script>
+
+		
+
+		<script type="text/javascript" src="javascript/jquery.bxslider.min.js"></script>
+		
   </body>
 </html>
