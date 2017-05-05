@@ -22,8 +22,7 @@ module.exports = React.createClass({
 					</div>
 				</div>
 				<div className="container-fluid">
-
-
+				
 
 
 

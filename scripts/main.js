@@ -8,6 +8,7 @@ window.jQuery = $;
 
 Parse.initialize("p5pjOUCZjobYEd8rUofEo9IkLessjDxRUsUtvp16", "Tf3Rd4zjnI98dzkqlcEDVnJ2Pi3vHlumQR8blaHr");
 
+
 var NewHomeComponent = require('./components/NewHomeComponent');
 var PPageComponent = require('./components/PPageComponent');
 
