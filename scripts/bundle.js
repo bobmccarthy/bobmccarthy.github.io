@@ -35309,13 +35309,51 @@ module.exports = React.createClass({
 	render: function render() {
 		return React.createElement(
 			'div',
-			{ style: { textAlign: "center", padding: "100px" } },
+			null,
 			React.createElement(
-				'span',
-				{ style: { fontSize: "80px" } },
-				'Bob McCarthy,',
-				React.createElement('br', null),
-				'Software Engineer'
+				'div',
+				{ style: { textAlign: "center", padding: "100px", width: "100%", backgroundColor: "white", fontFamily: "Futura" } },
+				React.createElement(
+					'span',
+					{ style: { fontSize: "80px" } },
+					'Bob McCarthy,',
+					React.createElement('br', null),
+					'Software Engineer'
+				),
+				React.createElement(
+					'p',
+					{ style: { margin: "50px 0 0 0" } },
+					React.createElement(
+						'a',
+						{ style: { color: "black" }, href: 'mailto:bobmccarthyatx@gmail.com?Subject=Hello%20Bob', target: '_top' },
+						'bobmccarthyatx@gmail.com'
+					)
+				),
+				React.createElement(
+					'div',
+					{ style: { margin: "500px 0 0 0" } },
+					React.createElement(
+						'p',
+						null,
+						'Preview of my Portfolio. Mouseover to scroll.'
+					),
+					React.createElement('iframe', { style: { width: "60%", height: "300px" }, className: 'description', src: '#/projects' }),
+					React.createElement(
+						'p',
+						null,
+						React.createElement(
+							'a',
+							{ href: '#/projects' },
+							'Click'
+						),
+						' to View'
+					)
+				)
+			),
+			React.createElement(
+				'div',
+				{ style: { textAlign: "center", padding: "10px" } },
+				React.createElement('p', null)
 			)
 		);
 	}
@@ -35350,11 +35388,6 @@ module.exports = React.createClass({
 					{ className: 'heroText' },
 					React.createElement(
 						'h1',
-						null,
-						'Tech Texan,'
-					),
-					React.createElement(
-						'h2',
 						null,
 						'Bob McCarthy'
 					),
@@ -35407,7 +35440,7 @@ module.exports = React.createClass({
 						React.createElement(
 							'p',
 							null,
-							'Graduate of The Iron Yard, Austin. Voted `Javascript Warloard`. As you explore my portfolio, click as many buttons as you can. This site is a representation of some of the things I learned over the Front-end Engineering course I took. Have fun and enjoy!'
+							'Graduate of The Iron Yard, Austin. Voted "Javascript Warloard". As you explore my portfolio, click as many buttons as you can. This site is a representation of some of the things I learned over the Front-end Engineering course I took. Have fun and enjoy!'
 						)
 					),
 					React.createElement(
@@ -35426,7 +35459,7 @@ module.exports = React.createClass({
 						React.createElement(
 							'p',
 							null,
-							'When I`m not behind my screens, you`ll often see me with an instrument in my hand. I have a bad, or good depending on how you look at it, habit of trying to learn every instrument I can get my hands on. The outdoors intrigue me. Plus, I am the only person I know who ',
+							'When I\'m not behind my screens, you\'ll often see me with an instrument in my hand. I have a bad, or good depending on how you look at it, habit of trying to learn every instrument I can get my hands on. The outdoors intrigue me. Plus, I am the only person I know who ',
 							React.createElement(
 								'i',
 								null,
@@ -35514,7 +35547,7 @@ module.exports = React.createClass({
 							'a',
 							{ href: 'http://www.friendshipsforlife.org' },
 							React.createElement(
-								'h2',
+								'h3',
 								null,
 								'FriendshipsForLife.org!'
 							)
@@ -35621,7 +35654,7 @@ module.exports = React.createClass({
 						React.createElement(
 							'p',
 							null,
-							'Introducing my next greatest idea, Gist! I was working the Guest Service desk at Whole Foods recently and someone’s really nice grandmother came up to me and said: `My doctor told me I have to eat Gluten Free.` Me: `Yes ma’am, how can I help?` Her: `I am so hungry!` This sparked my idea for an app that would allow people to see what groceries are available for their unique diet at the store of their choice. Also built in is a way to make quick grocery lists and save them for future use.'
+							'Introducing my next greatest idea, Gist! I was working the Guest Service desk at Whole Foods recently and someone’s really nice grandmother came up to me and said: "My doctor told me I have to eat Gluten Free." Me: "Yes ma’am, how can I help?" Her: "I am so hungry!" This sparked my idea for an app that would allow people to see what groceries are available for their unique diet at the store of their choice. Also built in is a way to make quick grocery lists and save them for future use.'
 						),
 						React.createElement(
 							'a',
@@ -36559,10 +36592,12 @@ $(document).on('ready', function () {
 		newhome: function newhome() {
 			ReactDOM.render(React.createElement(NewHomeComponent, null), document.getElementById('main'));
 			$('#nav').hide();
+			$('body').scrollTop(0);
 		},
 		projects: function projects() {
 			ReactDOM.render(React.createElement(PPageComponent, null), document.getElementById('main'));
 			$('#nav').hide();
+			$('body').scrollTop(0);
 		},
 		Ghome: function Ghome() {
 			$('#nav').show();

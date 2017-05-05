@@ -42,22 +42,24 @@ $(document).on('ready', function(){
 		},
 		newhome: function(){
 			ReactDOM.render(<NewHomeComponent />,
-			document.getElementById('main'));
+				document.getElementById('main'));
 			$('#nav').hide();
+			$('body').scrollTop(0);
 		},
 		projects: function(){
 			ReactDOM.render(<PPageComponent />,
-			document.getElementById('main'));
+				document.getElementById('main'));
 			$('#nav').hide();
+			$('body').scrollTop(0);
 		},
 		Ghome: function() {
 			$('#nav').show();
 			$('#login').hide();
 			ReactDOM.render(<HomeComponent />,
-			document.getElementById('main'));
+				document.getElementById('main'));
 			ReactDOM.render(
-			<NavigationComponent router={r} />,
-			document.getElementById('nav'));
+				<NavigationComponent router={r} />,
+				document.getElementById('nav'));
 			$('body').scrollTop(0);
 		},
 		login: function(){
@@ -65,54 +67,54 @@ $(document).on('ready', function(){
 		},
 		productSearch: function(id){
 			ReactDOM.render(<ProductSearchComponent router={r} listId={id}/>,
-			document.getElementById('main'));
+				document.getElementById('main'));
 			ReactDOM.render(
-			<NavigationComponent router={r} />,
-			document.getElementById('nav'));
+				<NavigationComponent router={r} />,
+				document.getElementById('nav'));
 			$('body').scrollTop(0);
 		},
 		profile: function(){
 			ReactDOM.render(<ProfileComponent router={r} />,
-			document.getElementById('main'));
+				document.getElementById('main'));
 			ReactDOM.render(
-			<NavigationComponent router={r} />,
-			document.getElementById('nav'));
+				<NavigationComponent router={r} />,
+				document.getElementById('nav'));
 		},
 		myLists: function(id){
 			ReactDOM.render(<MyListsComponent router={r} itemId={id}/>,
-			document.getElementById('main'));
+				document.getElementById('main'));
 			ReactDOM.render(
-			<NavigationComponent router={r} />,
-			document.getElementById('nav'));
+				<NavigationComponent router={r} />,
+				document.getElementById('nav'));
 			$('body').scrollTop(0);
 		},
 		details: function(id){
 			ReactDOM.render(<ItemDetailsComponent router={r} itemId={id}/>,
-			document.getElementById('main'));
+				document.getElementById('main'));
 			ReactDOM.render(
-			<NavigationComponent router={r} />,
-			document.getElementById('nav'));
+				<NavigationComponent router={r} />,
+				document.getElementById('nav'));
 		},
 		addList: function(){
 			ReactDOM.render(<AddListComponent router={r} />,
-			document.getElementById('main'));
+				document.getElementById('main'));
 			ReactDOM.render(
-			<NavigationComponent router={r} />,
-			document.getElementById('nav'));
+				<NavigationComponent router={r} />,
+				document.getElementById('nav'));
 		},
 		IQhome: function() {
 			ReactDOM.render(<IronQuizzesComponent router={r} />,
-			document.getElementById('main'));
+				document.getElementById('main'));
 		},
 		ttt: function(){
 			ReactDOM.render(<BoardTileComponent router={r} />,
-			document.getElementById('main'));
+				document.getElementById('main'));
 			$('body').scrollTop(0);
 		},
 		finances: function(){
 			Parse.initialize('nVzrZSyHc9zZEKd3UGiztb7Z1m001ScibBLpA5o2', 'vyuHvAK922TMbdvvkXZb8oK89a2paFCRqzDTVEmh');
 			ReactDOM.render(<BudgetComponent router={r} />,
-			document.getElementById('main'));
+				document.getElementById('main'));
 		}
 	});
 
