@@ -8,6 +8,7 @@ window.jQuery = $;
 
 Parse.initialize("p5pjOUCZjobYEd8rUofEo9IkLessjDxRUsUtvp16", "Tf3Rd4zjnI98dzkqlcEDVnJ2Pi3vHlumQR8blaHr");
 
+var NewHomeComponent = require('./components/NewHomeComponent');
 var PPageComponent = require('./components/PPageComponent');
 
 var NavigationComponent = require('./components/NavigationComponent');
@@ -25,10 +26,11 @@ var BudgetComponent = require('./components/BudgetComponent');
 $(document).on('ready', function(){
 	var Router = Backbone.Router.extend({
 		routes: {
-			'': 'home',
+			'': 'newhome',
+			'projects': 'projects',
 			'Gist': 'Ghome',
 			'login': 'login',
-			'logout': 'home',
+			'logout': 'newhome',
 			'productSearch(/:id)': 'productSearch',
 			'profile': 'profile',
 			'myLists(/:id)': 'myLists',
@@ -38,8 +40,12 @@ $(document).on('ready', function(){
 			'ttt': 'ttt',
 			'finances': 'finances'
 		},
-		home: function(){
-			console.log("got to home...")
+		newhome: function(){
+			ReactDOM.render(<NewHomeComponent />,
+			document.getElementById('main'));
+			$('#nav').hide();
+		},
+		projects: function(){
 			ReactDOM.render(<PPageComponent />,
 			document.getElementById('main'));
 			$('#nav').hide();

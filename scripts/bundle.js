@@ -34129,7 +34129,7 @@ module.exports = React.createClass({
 
 });
 
-},{"../models/ListModel":192,"react":173}],175:[function(require,module,exports){
+},{"../models/ListModel":193,"react":173}],175:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -34640,7 +34640,7 @@ module.exports = React.createClass({
 });
 //comments here
 
-},{"../models/FinancesModel":191,"jquery":17,"react":173}],177:[function(require,module,exports){
+},{"../models/FinancesModel":192,"jquery":17,"react":173}],177:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -34725,7 +34725,7 @@ module.exports = React.createClass({
 
 });
 
-},{"../models/ListProductsModel":193,"../models/ProductModel":194,"jquery":17,"react":173}],178:[function(require,module,exports){
+},{"../models/ListProductsModel":194,"../models/ProductModel":195,"jquery":17,"react":173}],178:[function(require,module,exports){
 //This is the navigation component. The router has been passed in as a property.
 'use strict';
 
@@ -34903,7 +34903,7 @@ module.exports = React.createClass({
 
 });
 
-},{"../models/ProductModel":194,"./SingleProductBoxComponent":188,"react":173}],181:[function(require,module,exports){
+},{"../models/ProductModel":195,"./SingleProductBoxComponent":189,"react":173}],181:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -34955,7 +34955,7 @@ module.exports = React.createClass({
 
 });
 
-},{"../models/ListModel":192,"backbone":1,"jquery":17,"react":173}],182:[function(require,module,exports){
+},{"../models/ListModel":193,"backbone":1,"jquery":17,"react":173}],182:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -35073,7 +35073,7 @@ module.exports = React.createClass({
 
 });
 
-},{"../models/ListModel":192,"../models/ProductModel":194,"../models/UserModel":195,"./EachProductComponent":177,"./TotalPriceComponent":189,"backbone":1,"backbone/node_modules/underscore":2,"react":173}],183:[function(require,module,exports){
+},{"../models/ListModel":193,"../models/ProductModel":195,"../models/UserModel":196,"./EachProductComponent":177,"./TotalPriceComponent":190,"backbone":1,"backbone/node_modules/underscore":2,"react":173}],183:[function(require,module,exports){
 //This is the navigation component. The router has been passed in as a property.
 'use strict';
 
@@ -35297,8 +35297,39 @@ module.exports = React.createClass({
 
 });
 
-},{"../models/ListModel":192,"backbone":1,"bootstrap":3,"jquery":17,"react":173}],184:[function(require,module,exports){
+},{"../models/ListModel":193,"backbone":1,"bootstrap":3,"jquery":17,"react":173}],184:[function(require,module,exports){
+'use strict';
+
+var React = require('react');
+var Backbone = require('backbone');
+
+module.exports = React.createClass({
+	displayName: 'exports',
+
+	render: function render() {
+		return React.createElement(
+			'div',
+			{ style: { textAlign: "center", padding: "100px" } },
+			React.createElement(
+				'span',
+				{ style: { fontSize: "80px" } },
+				'Bob McCarthy,',
+				React.createElement('br', null),
+				'Software Engineer'
+			)
+		);
+	}
+});
+
+},{"backbone":1,"react":173}],185:[function(require,module,exports){
 //This is the navigation component. The router has been passed in as a property.
+
+// <div className="col-xs-12">
+// 	<div className="myTitle">
+// 		<div>About THE Bob McCarthy</div>
+// 	</div>
+// </div>
+
 'use strict';
 
 var React = require('react');
@@ -35320,7 +35351,7 @@ module.exports = React.createClass({
 					React.createElement(
 						'h1',
 						null,
-						'In Tech, We can Change the World!'
+						'Tech Texan,'
 					),
 					React.createElement(
 						'h2',
@@ -35331,7 +35362,7 @@ module.exports = React.createClass({
 					React.createElement(
 						'h4',
 						null,
-						'Front End Developer'
+						'Software Engineer'
 					)
 				)
 			),
@@ -35340,51 +35371,68 @@ module.exports = React.createClass({
 				{ className: 'container-fluid' },
 				React.createElement(
 					'div',
-					{ className: 'col-xs-12' },
-					React.createElement(
-						'div',
-						{ className: 'myTitle' },
-						React.createElement(
-							'div',
-							null,
-							'About THE Bob McCarthy'
-						)
-					)
-				),
-				React.createElement(
-					'div',
 					{ className: 'row aboutMe' },
 					React.createElement(
 						'div',
 						{ className: 'col-xs-12 col-md-4' },
 						React.createElement(
+							'h3',
+							null,
+							'About This Site'
+						),
+						React.createElement(
 							'p',
 							null,
-							'Recent graduate of The Iron Yard, Austin. Voted `Javascript Warloard`, I have just found my love for coding. As you explore my portfolio, click as many buttons as you can. This site is a representation of some of the things I learned over the Front-end Engineering course I took. Have fun and enjoy!'
+							'I used ReactJS to build this site as a single page application. It is fully responsive thanks to Bootstrap. '
+						),
+						React.createElement(
+							'p',
+							null,
+							'As you explore my portfolio, click as many buttons as you can. This site is a representation of some of the things I learned over the Front-end Engineering course I took. Have fun and enjoy!'
 						)
 					),
 					React.createElement(
 						'div',
 						{ className: 'col-xs-12 col-md-4' },
 						React.createElement(
+							'h3',
+							null,
+							'Education'
+						),
+						React.createElement(
 							'p',
 							null,
-							'I used React to build this site. Most of my HTML is sepereated into special components that only get shown on the page in specific circumstances. I am familiar with CSS, and prefer to use a transpiler so I can style using SASS, and have the page read it as CSS. I enjoy using the Bootstrap grid system, but pretty much can`t stand their default styling. So, on this site I used some of the Materialize CSS as well. JavaScript has become my forte. I am the only person I know who ',
+							'Proud alumni of The University of Texas, I earned a BA in Sociology with a minor in Philosophy. '
+						),
+						React.createElement(
+							'p',
+							null,
+							'Graduate of The Iron Yard, Austin. Voted `Javascript Warloard`. As you explore my portfolio, click as many buttons as you can. This site is a representation of some of the things I learned over the Front-end Engineering course I took. Have fun and enjoy!'
+						)
+					),
+					React.createElement(
+						'div',
+						{ className: 'col-xs-12 col-md-4' },
+						React.createElement(
+							'h3',
+							null,
+							'What About Bob?'
+						),
+						React.createElement(
+							'p',
+							null,
+							'Since graduating, I became gainfully employed as a Software Engineer/ Intern Manager at Accio Data, a background screening software company in the wonderful town of Dripping Springs, Tx. '
+						),
+						React.createElement(
+							'p',
+							null,
+							'When I`m not behind my screens, you`ll often see me with an instrument in my hand. I have a bad, or good depending on how you look at it, habit of trying to learn every instrument I can get my hands on. The outdoors intrigue me. Plus, I am the only person I know who ',
 							React.createElement(
 								'i',
 								null,
 								'likes'
 							),
 							' whiteboarding.'
-						)
-					),
-					React.createElement(
-						'div',
-						{ className: 'col-xs-12 col-md-4' },
-						React.createElement(
-							'p',
-							null,
-							'You`ll often see me with an instrument in my hand. I have a bad, or good depending on how you look at it, habit of trying to learn every instrument I can get my hands on. The outdoors intrigue me. Hiking, swimming, and camping are a must-do for me to keep my sanity. '
 						),
 						React.createElement(
 							'a',
@@ -35940,7 +35988,7 @@ module.exports = React.createClass({
 // 					<img src="../../images/phone.png"/>
 // 				</div>
 
-},{"backbone":1,"react":173}],185:[function(require,module,exports){
+},{"backbone":1,"react":173}],186:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -36000,7 +36048,7 @@ module.exports = React.createClass({
 
 });
 
-},{"react":173}],186:[function(require,module,exports){
+},{"react":173}],187:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -36268,7 +36316,7 @@ module.exports = React.createClass({
 
 });
 
-},{"../models/ListModel":192,"../models/ListProductsModel":193,"../models/ProductModel":194,"./ListDropdownComponent":181,"./ProductBoxComponent":185,"backbone":1,"jquery":17,"react":173}],187:[function(require,module,exports){
+},{"../models/ListModel":193,"../models/ListProductsModel":194,"../models/ProductModel":195,"./ListDropdownComponent":181,"./ProductBoxComponent":186,"backbone":1,"jquery":17,"react":173}],188:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -36366,7 +36414,7 @@ module.exports = React.createClass({
 
 });
 
-},{"jquery":17,"react":173}],188:[function(require,module,exports){
+},{"jquery":17,"react":173}],189:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -36416,7 +36464,7 @@ module.exports = React.createClass({
 	}
 });
 
-},{"react":173}],189:[function(require,module,exports){
+},{"react":173}],190:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -36466,7 +36514,7 @@ module.exports = React.createClass({
 
 });
 
-},{"../models/ListProductsModel":193,"../models/ProductModel":194,"jquery":17,"react":173}],190:[function(require,module,exports){
+},{"../models/ListProductsModel":194,"../models/ProductModel":195,"jquery":17,"react":173}],191:[function(require,module,exports){
 'use strict';
 var React = require('react');
 var bootstrap = require('bootstrap');
@@ -36477,6 +36525,7 @@ window.jQuery = $;
 
 Parse.initialize("p5pjOUCZjobYEd8rUofEo9IkLessjDxRUsUtvp16", "Tf3Rd4zjnI98dzkqlcEDVnJ2Pi3vHlumQR8blaHr");
 
+var NewHomeComponent = require('./components/NewHomeComponent');
 var PPageComponent = require('./components/PPageComponent');
 
 var NavigationComponent = require('./components/NavigationComponent');
@@ -36493,10 +36542,11 @@ var BudgetComponent = require('./components/BudgetComponent');
 $(document).on('ready', function () {
 	var Router = Backbone.Router.extend({
 		routes: {
-			'': 'home',
+			'': 'newhome',
+			'projects': 'projects',
 			'Gist': 'Ghome',
 			'login': 'login',
-			'logout': 'home',
+			'logout': 'newhome',
 			'productSearch(/:id)': 'productSearch',
 			'profile': 'profile',
 			'myLists(/:id)': 'myLists',
@@ -36506,8 +36556,11 @@ $(document).on('ready', function () {
 			'ttt': 'ttt',
 			'finances': 'finances'
 		},
-		home: function home() {
-			console.log("got to home...");
+		newhome: function newhome() {
+			ReactDOM.render(React.createElement(NewHomeComponent, null), document.getElementById('main'));
+			$('#nav').hide();
+		},
+		projects: function projects() {
 			ReactDOM.render(React.createElement(PPageComponent, null), document.getElementById('main'));
 			$('#nav').hide();
 		},
@@ -36560,42 +36613,42 @@ $(document).on('ready', function () {
 	Backbone.history.start();
 });
 
-},{"./components/AddListComponent":174,"./components/BoardTileComponent":175,"./components/BudgetComponent":176,"./components/HomeComponent":178,"./components/IronQuizzesComponent":179,"./components/ItemDetailsComponent":180,"./components/MyListsComponent":182,"./components/NavigationComponent":183,"./components/PPageComponent":184,"./components/ProductSearchComponent":186,"./components/ProfileComponent":187,"backbone":1,"bootstrap":3,"jquery":17,"react":173,"react-dom":18}],191:[function(require,module,exports){
+},{"./components/AddListComponent":174,"./components/BoardTileComponent":175,"./components/BudgetComponent":176,"./components/HomeComponent":178,"./components/IronQuizzesComponent":179,"./components/ItemDetailsComponent":180,"./components/MyListsComponent":182,"./components/NavigationComponent":183,"./components/NewHomeComponent":184,"./components/PPageComponent":185,"./components/ProductSearchComponent":187,"./components/ProfileComponent":188,"backbone":1,"bootstrap":3,"jquery":17,"react":173,"react-dom":18}],192:[function(require,module,exports){
 'use strict';
 
 module.exports = Parse.Object.extend({
   className: 'Finances'
 });
 
-},{}],192:[function(require,module,exports){
+},{}],193:[function(require,module,exports){
 'use strict';
 
 module.exports = Parse.Object.extend({
   className: 'lists'
 });
 
-},{}],193:[function(require,module,exports){
+},{}],194:[function(require,module,exports){
 'use strict';
 
 module.exports = Parse.Object.extend({
   className: 'ListProducts'
 });
 
-},{}],194:[function(require,module,exports){
+},{}],195:[function(require,module,exports){
 'use strict';
 
 module.exports = Parse.Object.extend({
   className: 'products'
 });
 
-},{}],195:[function(require,module,exports){
+},{}],196:[function(require,module,exports){
 'use strict';
 
 module.exports = Parse.Object.extend({
   className: 'User'
 });
 
-},{}]},{},[190])
+},{}]},{},[191])
 
 
 //# sourceMappingURL=bundle.js.map

@@ -1,4 +1,12 @@
 //This is the navigation component. The router has been passed in as a property.
+
+					// <div className="col-xs-12">
+					// 	<div className="myTitle">
+					// 		<div>About THE Bob McCarthy</div>
+					// 	</div>
+					// </div>
+
+
 var React = require('react');
 var Backbone = require('backbone');
 
@@ -8,28 +16,34 @@ module.exports = React.createClass({
 			<div>
 				<div id="hero">
 					<div className="heroText">
-						<h1>In Tech, We can Change the World!</h1>
+						<h1>Tech Texan,</h1>
 						<h2>Bob McCarthy</h2>
 						<div className="lineBreak"></div>
-						<h4>Front End Developer</h4>
+						<h4>Software Engineer</h4>
 					</div>
 				</div>
 				<div className="container-fluid">
-					<div className="col-xs-12">
-						<div className="myTitle">
-							<div>About THE Bob McCarthy</div>
-						</div>
-					</div>
+
+
+
+
+
+
 					<div className="row aboutMe">
 						<div className="col-xs-12 col-md-4">
-							<p>Recent graduate of The Iron Yard, Austin. Voted `Javascript Warloard`, I have just found my love for coding. As you explore my portfolio, click as many buttons as you can. This site is a representation of some of the things I learned over the Front-end Engineering course I took. Have fun and enjoy!</p>
-							
+						<h3>About This Site</h3>
+							<p>I used ReactJS to build this site as a single page application. It is fully responsive thanks to Bootstrap. </p>
+							<p>As you explore my portfolio, click as many buttons as you can. This site is a representation of some of the things I learned over the Front-end Engineering course I took. Have fun and enjoy!</p>
 						</div>
 						<div className="col-xs-12 col-md-4">
-							<p>I used React to build this site. Most of my HTML is sepereated into special components that only get shown on the page in specific circumstances. I am familiar with CSS, and prefer to use a transpiler so I can style using SASS, and have the page read it as CSS. I enjoy using the Bootstrap grid system, but pretty much can`t stand their default styling. So, on this site I used some of the Materialize CSS as well. JavaScript has become my forte. I am the only person I know who <i>likes</i> whiteboarding.</p>
+							<h3>Education</h3>
+							<p>Proud alumni of The University of Texas, I earned a BA in Sociology with a minor in Philosophy. </p>
+							<p>Graduate of The Iron Yard, Austin. Voted `Javascript Warloard`. As you explore my portfolio, click as many buttons as you can. This site is a representation of some of the things I learned over the Front-end Engineering course I took. Have fun and enjoy!</p>
 						</div>
 						<div className="col-xs-12 col-md-4">
-							<p>You`ll often see me with an instrument in my hand. I have a bad, or good depending on how you look at it, habit of trying to learn every instrument I can get my hands on. The outdoors intrigue me. Hiking, swimming, and camping are a must-do for me to keep my sanity. </p>
+							<h3>What About Bob?</h3>
+							<p>Since graduating, I became gainfully employed as a Software Engineer/ Intern Manager at Accio Data, a background screening software company in the wonderful town of Dripping Springs, Tx. </p>
+							<p>When I`m not behind my screens, you`ll often see me with an instrument in my hand. I have a bad, or good depending on how you look at it, habit of trying to learn every instrument I can get my hands on. The outdoors intrigue me. Plus, I am the only person I know who <i>likes</i> whiteboarding.</p>
 							<a href="https://www.linkedin.com/in/bobmccarthyatx"><button className="linkedIn">View My LinkedIn</button></a>
 						</div>
 					</div>
